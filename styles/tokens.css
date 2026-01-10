@@ -1,9 +1,29 @@
 /* Design Tokens */
 
 :root {
-    /* Colors */
+    /* Colors - Neutral Scale */
+    --color-white: #FFFFFF;
+    --color-gray-50: #F9FAFB;
+    --color-gray-100: #F3F4F6;
+    --color-gray-200: #E5E7EB;
+    --color-gray-300: #D1D5DB;
+    --color-gray-400: #9CA3AF;
+    --color-gray-500: #6B7280;
+    --color-gray-600: #4B5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1F2937;
+    --color-gray-900: #111827;
+    --color-black: #000000;
+    
+    /* Colors - Brand */
     --color-about: #FF0000;
     --color-wrapper-bg: var(--color-about);
+    
+    /* Colors - Semantic */
+    --color-text-primary: var(--color-gray-900);
+    --color-text-secondary: var(--color-gray-700);
+    --color-bg-primary: var(--color-white);
+    --color-bg-secondary: var(--color-gray-50);
     
     /* Spacing */
     --spacing-xs: 8px;
@@ -17,10 +37,11 @@
     --font-family-sans: 'Merriweather Sans', sans-serif;
     --font-family-base: var(--font-family-sans);
     --font-family-headings: var(--font-family-serif);
-    --font-size-base: 16px;
-    --font-size-h1: 2.5rem;
-    --font-size-h2: 2rem;
-    --font-size-h3: 1.5rem;
+    --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    --font-size-h1: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+    --font-size-h2: clamp(1.5rem, 1.25rem + 1.25vw, 2rem);
+    --font-size-h3: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+    --font-size-nav: clamp(2rem, 0.95rem + 0.5vw, 3rem);
     --font-weight-light: 300;
     --font-weight-regular: 400;
     --font-weight-medium: 500;
