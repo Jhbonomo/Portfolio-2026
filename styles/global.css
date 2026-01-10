@@ -42,12 +42,13 @@ body {
     content: '';
     position: absolute;
     bottom: calc(-1 * clamp(20px, 4vw, 30px) + 1px);
-    left: clamp(20px, 5vw, 40px);
+    left: var(--triangle-position, clamp(20px, 5vw, 40px));
     width: 0;
     height: 0;
     border-left: clamp(20px, 4vw, 30px) solid transparent;
     border-right: clamp(20px, 4vw, 30px) solid transparent;
     border-top: clamp(20px, 4vw, 30px) solid var(--color-bg-primary);
+    transition: left var(--transition-normal);
 }
 
 @media (max-width: 768px) {
