@@ -166,10 +166,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Mobile - all cards always active
+    // Mobile - scroll-triggered card switching
     if (window.innerWidth <= 912) {
-        cards.forEach(card => {
-            card.classList.add('active');
+        // Set initial active card
+        if (cards.length > 0) {
+            updateCardActive(cards[0]);
+        }
+        
+        // Scroll listener to update active card based on position
+        window.addEventListener('scroll', () => {
+            const triggerPoint = window.innerHeight * 0.75; // 60% from top
+            
+            cards.forEach(card => {
+                const cardRect = card.getBoundingClientRect();
+                const cardCenter = cardRect.top + (cardRect.height / 2);
+                
+                // Check if card center is at or past the trigger point
+                if (cardCenter <= triggerPoint && cardCenter >= 0) {
+                    // Only update if this card is not already active
+                    if (!card.classList.contains('active')) {
+                        updateCardActive(card);
+                    }
+                }
+            });
         });
     }
 });
