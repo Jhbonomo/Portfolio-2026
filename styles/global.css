@@ -62,7 +62,7 @@ body {
     align-items: flex-start;
     justify-content: flex-end;
     padding: var(--spacing-xl);
-    gap: var(--spacing-lg);
+    gap: var(--spacing-2xl);
 }
 
 .speech-bubble {
@@ -73,6 +73,7 @@ body {
     border-radius: var(--border-radius-md);
     filter: drop-shadow(10px 10px 0 rgba(0, 0, 0, 0.4));
     position: relative;
+    max-width: 800px;
 }
 
 .speech-bubble::after {
@@ -224,12 +225,14 @@ body {
     cursor: pointer;
     transition: opacity 0.2s;
     font-family: var(--font-family-base);
-    display: none;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .card:hover .read-case,
 .card.active .read-case {
-    display: inline-block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .read-case:hover {
