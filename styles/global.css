@@ -156,7 +156,28 @@ body {
 }
 
 .card-major {
-    padding: var(--spacing-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    height: fit-content;
+}
+
+.card-major .card-tags {
+    margin-bottom: 6px;
+}
+
+.card-major .tag {
+    font-size: 9px;
+    padding: 2px 6px;
+}
+
+.card-major h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.card-major p {
+    font-size: 12px;
+    margin-bottom: 0;
+    line-height: 1.4;
 }
 
 .secondary-cards {
@@ -339,13 +360,9 @@ body {
         padding: 2px 6px;
     }
     
-    .card p {
-        display: none;
-    }
-    
-    .card:hover p,
-    .card.active p {
-        display: block;
+    .card-major p {
+        font-size: 12px;
+        line-height: 1.4;
     }
     
     .read-case {
