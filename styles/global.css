@@ -393,6 +393,30 @@ p {
         flex-direction: column;
     }
     
+    /* Unify all cards to card-minor styling */
+    .card-major {
+        padding: var(--spacing-xs) var(--spacing-xs);
+        padding-left: var(--spacing-sm);
+    }
+    
+    .card-major .card-tags {
+        margin-bottom: 6px;
+    }
+    
+    .card-major .tag {
+        font-size: 9px;
+        padding: 2px 6px;
+    }
+    
+    .card-major h2 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .card-major p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
     
     /* Show all card descriptions on mobile */
     .card p {
