@@ -380,6 +380,7 @@ body {
     
     .speech-bubble {
         margin: 0 var(--spacing-sm);
+        margin-bottom: var(--spacing-lg);
         max-width: 95%;
     }
     
