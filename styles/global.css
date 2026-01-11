@@ -166,7 +166,7 @@ p {
     align-items: center;
     justify-content: center;
     padding: var(--spacing-xl);
-    flex: 1;
+    flex: 0 0 40%;
     height: 100vh;
     transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -209,7 +209,7 @@ p {
 .card {
     padding-left: var(--spacing-sm);
     background-color: var(--color-bg-primary);
-    transition: all 0.5s ease, opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-left-color 0.5s ease;
     cursor: pointer;
     position: relative;
     border-left: 3px solid transparent;
@@ -236,7 +236,7 @@ p {
 }
 
 .card-major p {
-    font-size: var(--spacing-sm);
+    font-size: 12px;
     margin-bottom: 0;
     line-height: 1.4;
 }
@@ -315,12 +315,7 @@ p {
 }
 
 .card:hover p,
-.card.active p {
-    opacity: 1;
-    max-height: 500px;
-    transform: translateY(0);
-}
-
+.card.active p,
 .card-major p {
     opacity: 1;
     max-height: 500px;
@@ -341,13 +336,19 @@ p {
 
 .read-case:hover {
     background-color: var(--color-beige);
+}
 
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.footer {
+    display: none;
 }
 
 /* ==========================================================================
    Responsive Design - Mobile (≤912px)
    ========================================================================== */
-
 
 @media (max-width: 912px) {
     .cases {
@@ -381,8 +382,6 @@ p {
     }
     
     .secondary-cards {
-        overflow-y: visible;
-        max-height: none;
         display: flex;
         flex-direction: column;
     }
@@ -451,12 +450,4 @@ p {
         justify-content: center;
         margin-top: var(--spacing-sm);
     }
-}
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-
-.footer {
-    display: none;
 }
