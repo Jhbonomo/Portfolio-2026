@@ -199,4 +199,24 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initParallax();
     initCards();
+    
+    // Card entrance animations with cascade effect
+    const cards = document.querySelectorAll('.card');
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // Get the index of the card for stagger delay
+                const index = Array.from(cards).indexOf(entry.target);
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 150); // 150ms stagger between each card
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+    
+    cards.forEach(card => {
+        cardObserver.observe(card);
+    });
 });
