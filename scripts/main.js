@@ -1,31 +1,5 @@
 // Main JavaScript file
 
-// Utility: Custom smooth scroll function with adjustable duration
-function smoothScrollTo(element, duration = 1200) {
-    const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    let startTime = null;
-    
-    function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-    }
-    
-    // Easing function for smooth animation
-    function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-    }
-    
-    requestAnimationFrame(animation);
-}
-
 // Utility: Position triangle pointer on speech bubble
 function positionTriangle() {
     const aboutLink = document.querySelector('.nav-link[href="#about"]');
@@ -43,179 +17,190 @@ function positionTriangle() {
     bubble.style.setProperty('--triangle-position', `${offsetLeft}px`);
 }
 
-// Initialize Navigation
-function initNavigation() {
+// Initialize everything on DOM load
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Portfolio carregado!');
+    
     const navLinks = document.querySelectorAll('.nav-link');
     const nav = document.querySelector('.main-nav');
     const casesSection = document.querySelector('.cases');
     const wrapperSection = document.querySelector('.wrapper');
     
-    // Click navigation
+    // Smooth scroll function
+    function smoothScrollTo(targetPosition, duration = 1500) {
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+            
+            const ease = progress < 0.5
+                ? 2 * progress * progress
+                : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+            
+            window.scrollTo(0, startPosition + distance * ease);
+            
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        }
+        
+        requestAnimationFrame(animation);
+    }
+    
+    // Navigation functionality
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            
-            // Remove active from all
             navLinks.forEach(l => l.classList.remove('active'));
-            
-            // Add active to clicked link
             link.classList.add('active');
             
-            // Scroll to My Work section
-            if (link.getAttribute('href') === '#work') {
-                if (casesSection) {
-                    smoothScrollTo(casesSection, 1500);
-                }
-            }
-            
-            // Scroll to About section
-            if (link.getAttribute('href') === '#about') {
-                if (wrapperSection) {
-                    smoothScrollTo(wrapperSection, 1500);
-                }
+            if (link.textContent.includes('My Work')) {
+                const targetPosition = casesSection.offsetTop;
+                smoothScrollTo(targetPosition);
+            } else {
+                smoothScrollTo(0);
             }
         });
     });
     
-    // Scroll-based navigation state
+    // Scroll-based active nav state
     window.addEventListener('scroll', () => {
         const casesTop = casesSection.getBoundingClientRect().top;
-        const aboutLink = document.querySelector('.nav-link[href="#about"]');
-        const workLink = document.querySelector('.nav-link[href="#work"]');
         
         if (casesTop <= 100) {
             nav.classList.add('repositioned');
-            
-            // Update active to My Work
-            navLinks.forEach(l => l.classList.remove('active'));
-            workLink.classList.add('active');
+            navLinks[0].classList.remove('active');
+            navLinks[1].classList.add('active');
         } else {
             nav.classList.remove('repositioned');
-            
-            // Update active to About
-            navLinks.forEach(l => l.classList.remove('active'));
-            aboutLink.classList.add('active');
+            navLinks[1].classList.remove('active');
+            navLinks[0].classList.add('active');
         }
     });
-}
-
-// Initialize Parallax effects
-function initParallax() {
+    
+    // Speech bubble parallax effect
     const speechBubble = document.querySelector('.speech-bubble');
+    const parallaxSpeed = 1.5;
     
     window.addEventListener('scroll', () => {
-        // Parallax effect for speech bubble
         const scrolled = window.pageYOffset;
-        const parallaxSpeed = 1.5; // Moves 1.5x faster than normal scroll
-        
-        if (speechBubble) {
-            speechBubble.style.transform = `translateY(-${scrolled * parallaxSpeed}px)`;
-        }
+        const parallax = scrolled * parallaxSpeed;
+        speechBubble.style.transform = `translateY(-${parallax}px)`;
     });
-}
-
-// Initialize Card interactions
-function initCards() {
-    const cards = document.querySelectorAll('.card');
-    const imageContainer = document.querySelector('.image');
-    let currentMediaElement = document.querySelector('.image img');
-    
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            // Remove active from all cards
-            cards.forEach(c => c.classList.remove('active'));
-            
-            // Add active to hovered card
-            card.classList.add('active');
-            
-            // Get card data
-            const mediaSrc = card.dataset.image || card.dataset.video;
-            const mediaType = card.dataset.mediaType || 'image';
-            const newBgColor = card.dataset.bgcolor;
-            const aspectRatio = card.dataset.aspectRatio || 'default';
-            
-            if (mediaSrc && currentMediaElement) {
-                // Fade out current media
-                currentMediaElement.style.opacity = '0';
-                
-                setTimeout(() => {
-                    // Check if we need to switch between image and video
-                    if (mediaType === 'video' && currentMediaElement.tagName !== 'VIDEO') {
-                        // Replace img with video
-                        const videoElement = document.createElement('video');
-                        videoElement.src = mediaSrc;
-                        videoElement.autoplay = true;
-                        videoElement.loop = true;
-                        videoElement.muted = true;
-                        videoElement.className = aspectRatio;
-                        currentMediaElement.replaceWith(videoElement);
-                        currentMediaElement = videoElement;
-                        
-                        setTimeout(() => {
-                            videoElement.style.opacity = '1';
-                        }, 50);
-                    } else if (mediaType === 'image' && currentMediaElement.tagName !== 'IMG') {
-                        // Replace video with img
-                        const imgElement = document.createElement('img');
-                        imgElement.src = mediaSrc;
-                        imgElement.alt = 'Project preview';
-                        imgElement.className = aspectRatio;
-                        currentMediaElement.replaceWith(imgElement);
-                        currentMediaElement = imgElement;
-                        
-                        setTimeout(() => {
-                            imgElement.style.opacity = '1';
-                        }, 50);
-                    } else {
-                        // Same media type, just update src and class
-                        currentMediaElement.src = mediaSrc;
-                        currentMediaElement.className = aspectRatio;
-                        setTimeout(() => {
-                            currentMediaElement.style.opacity = '1';
-                        }, 50);
-                    }
-                }, 500);
-            }
-            
-            // Update background color
-            if (newBgColor) {
-                imageContainer.style.backgroundColor = newBgColor;
-            }
-        });
-    });
-}
-
-// Initialize everything on DOM load
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Portfolio carregado!');
     
     // Initialize triangle position
     positionTriangle();
-    
-    // Reposition on window resize
     window.addEventListener('resize', positionTriangle);
     
-    // Initialize all modules
-    initNavigation();
-    initParallax();
-    initCards();
-    
-    // Card entrance animations with cascade effect
+    // Card hover interactions with video support
     const cards = document.querySelectorAll('.card');
+    const imageContainer = document.querySelector('.image');
+    let mediaElement = document.querySelector('.image img');
+    
+    function updateCardActive(activeCard) {
+        // Remove active from all cards
+        cards.forEach(c => c.classList.remove('active'));
+        
+        // Add active to current card
+        activeCard.classList.add('active');
+        
+        // Get card data
+        const mediaSrc = activeCard.dataset.image || activeCard.dataset.video;
+        const mediaType = activeCard.dataset.mediaType || 'image';
+        const newBgColor = activeCard.dataset.bgcolor;
+        const aspectRatio = activeCard.dataset.aspectRatio || 'default';
+        
+        if (mediaSrc) {
+            mediaElement.style.opacity = '0';
+            
+            setTimeout(() => {
+                if (mediaType === 'video' && mediaElement.tagName !== 'VIDEO') {
+                    const videoElement = document.createElement('video');
+                    videoElement.src = mediaSrc;
+                    videoElement.autoplay = true;
+                    videoElement.loop = true;
+                    videoElement.muted = true;
+                    videoElement.className = aspectRatio;
+                    mediaElement.replaceWith(videoElement);
+                    mediaElement = videoElement;
+                    
+                    setTimeout(() => {
+                        videoElement.style.opacity = '1';
+                    }, 50);
+                } else if (mediaType === 'image' && mediaElement.tagName !== 'IMG') {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = mediaSrc;
+                    imgElement.alt = 'Project preview';
+                    imgElement.className = aspectRatio;
+                    mediaElement.replaceWith(imgElement);
+                    mediaElement = imgElement;
+                    
+                    setTimeout(() => {
+                        imgElement.style.opacity = '1';
+                    }, 50);
+                } else {
+                    mediaElement.src = mediaSrc;
+                    mediaElement.className = aspectRatio;
+                    setTimeout(() => {
+                        mediaElement.style.opacity = '1';
+                    }, 50);
+                }
+            }, 500);
+        }
+        
+        if (newBgColor) {
+            imageContainer.style.backgroundColor = newBgColor;
+        }
+    }
+    
+    // Desktop hover behavior
+    if (window.innerWidth > 912) {
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                updateCardActive(card);
+            });
+        });
+    }
+    
+    // Mobile scroll behavior - Intersection Observer
+    if (window.innerWidth <= 912) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '-45% 0px -45% 0px',
+            threshold: 0
+        };
+        
+        const cardScrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    updateCardActive(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        cards.forEach(card => {
+            cardScrollObserver.observe(card);
+        });
+    }
+    
+    // Card entrance animations
     const cardObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                // Get the index of the card for stagger delay
                 const index = Array.from(cards).indexOf(entry.target);
                 setTimeout(() => {
                     entry.target.classList.add('visible');
-                }, index * 150); // 150ms stagger between each card
+                }, index * 150);
             } else {
                 entry.target.classList.remove('visible');
             }
         });
     }, { threshold: 0.2 });
-    
+
     cards.forEach(card => {
         cardObserver.observe(card);
     });
