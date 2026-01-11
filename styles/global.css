@@ -169,6 +169,7 @@ body {
 
 .card-minor {
     padding: var(--spacing-xs) var(--spacing-sm);
+    height: fit-content;
 }
 
 .card-minor .card-tags {
@@ -222,11 +223,11 @@ body {
 .card p {
     color: var(--color-gray-800);
     line-height: 1.6;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transform: translateY(16px);
+    transform: translateY(-8px);
     transition: opacity 1.5s cubic-bezier(1, .3, 0.6, 1), 
                 transform 1s cubic-bezier(1, .3, 0.6, 1), 
                 max-height 1.5s cubic-bezier(1, .3, 0.6, 1);
@@ -244,12 +245,12 @@ body {
     background-color: var(--color-beige);
     color: var(--color-beige-dark);
     border: none;
-    padding: 8px 12px;
+    padding: 4px 8px;
     border-radius: 4px;
-    font-weight: var(--font-weight-semibold);
+    font-weight: 800;
     cursor: pointer;
     transition: opacity 0.8s ease;
-    font-family: var(--font-family-base);
+    font-family: var(--font-family-serif);
 }
 
 .read-case:hover {
