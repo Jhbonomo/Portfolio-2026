@@ -207,6 +207,7 @@ p {
     flex-direction: column;
     gap: var(--spacing-md);
     justify-content: flex-start;
+    overflow: auto;
 
 }
 
