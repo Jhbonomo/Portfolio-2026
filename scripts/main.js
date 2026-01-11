@@ -59,6 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
             
             if (link.textContent.includes('My Work')) {
+                // Start transition immediately on click
+                if (window.innerWidth > 912) {
+                    nav.classList.add('repositioned');
+                }
                 const targetPosition = casesSection.offsetTop;
                 smoothScrollTo(targetPosition);
             } else {
