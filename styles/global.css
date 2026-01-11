@@ -372,7 +372,10 @@ body {
     }
     
     .wrapper {
+        height: auto;
+        min-height: 100vh;
         padding: var(--spacing-md);
+        padding-bottom: 80px;
     }
     
     .speech-bubble {
@@ -381,6 +384,7 @@ body {
     }
     
     .main-nav {
+        position: fixed;
         bottom: 20px;
         gap: var(--spacing-sm);
     }
