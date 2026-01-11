@@ -1,6 +1,32 @@
 // Main JavaScript file
 
-// Função para posicionar o triângulo apontando para o link "About"
+// Utility: Custom smooth scroll function with adjustable duration
+function smoothScrollTo(element, duration = 1200) {
+    const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+    
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+    
+    // Easing function for smooth animation
+    function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+    
+    requestAnimationFrame(animation);
+}
+
+// Utility: Position triangle pointer on speech bubble
 function positionTriangle() {
     const aboutLink = document.querySelector('.nav-link[href="#about"]');
     const bubble = document.querySelector('.speech-bubble');
@@ -10,55 +36,48 @@ function positionTriangle() {
     const aboutRect = aboutLink.getBoundingClientRect();
     const bubbleRect = bubble.getBoundingClientRect();
     
-    // Calcula posição do About relativa ao bubble
+    // Calculate About position relative to bubble
     const offsetLeft = aboutRect.left - bubbleRect.left + (aboutRect.width / 2);
     
-    // Define CSS variable para posicionar o triângulo
+    // Set CSS variable to position triangle
     bubble.style.setProperty('--triangle-position', `${offsetLeft}px`);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Portfolio carregado!');
-    
-    // Posiciona o triângulo inicialmente
-    positionTriangle();
-    
-    // Reposiciona ao redimensionar a janela
-    window.addEventListener('resize', positionTriangle);
-    
-    // Adiciona evento de click nos links de navegação
+// Initialize Navigation
+function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
     const nav = document.querySelector('.main-nav');
     const casesSection = document.querySelector('.cases');
     const wrapperSection = document.querySelector('.wrapper');
     
+    // Click navigation
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             
-            // Remove active de todos
+            // Remove active from all
             navLinks.forEach(l => l.classList.remove('active'));
             
-            // Adiciona active no link clicado
+            // Add active to clicked link
             link.classList.add('active');
             
-            // Se clicar em My Work, faz scroll para a seção cases
+            // Scroll to My Work section
             if (link.getAttribute('href') === '#work') {
                 if (casesSection) {
-                    casesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    smoothScrollTo(casesSection, 1500);
                 }
             }
             
-            // Se clicar em About, faz scroll para a seção wrapper
+            // Scroll to About section
             if (link.getAttribute('href') === '#about') {
                 if (wrapperSection) {
-                    wrapperSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    smoothScrollTo(wrapperSection, 1500);
                 }
             }
         });
     });
     
-    // Animate nav on scroll
+    // Scroll-based navigation state
     window.addEventListener('scroll', () => {
         const casesTop = casesSection.getBoundingClientRect().top;
         const aboutLink = document.querySelector('.nav-link[href="#about"]');
@@ -67,19 +86,36 @@ document.addEventListener('DOMContentLoaded', () => {
         if (casesTop <= 100) {
             nav.classList.add('repositioned');
             
-            // Atualiza active para My Work
+            // Update active to My Work
             navLinks.forEach(l => l.classList.remove('active'));
             workLink.classList.add('active');
         } else {
             nav.classList.remove('repositioned');
             
-            // Atualiza active para About
+            // Update active to About
             navLinks.forEach(l => l.classList.remove('active'));
             aboutLink.classList.add('active');
         }
     });
+}
+
+// Initialize Parallax effects
+function initParallax() {
+    const speechBubble = document.querySelector('.speech-bubble');
     
-    // Card hover interactions with video support
+    window.addEventListener('scroll', () => {
+        // Parallax effect for speech bubble
+        const scrolled = window.pageYOffset;
+        const parallaxSpeed = 1.5; // Moves 1.5x faster than normal scroll
+        
+        if (speechBubble) {
+            speechBubble.style.transform = `translateY(-${scrolled * parallaxSpeed}px)`;
+        }
+    });
+}
+
+// Initialize Card interactions
+function initCards() {
     const cards = document.querySelectorAll('.card');
     const imageContainer = document.querySelector('.image');
     let currentMediaElement = document.querySelector('.image img');
@@ -138,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             currentMediaElement.style.opacity = '1';
                         }, 50);
                     }
-                }, 300);
+                }, 500);
             }
             
             // Update background color
@@ -147,4 +183,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+}
+
+// Initialize everything on DOM load
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Portfolio carregado!');
+    
+    // Initialize triangle position
+    positionTriangle();
+    
+    // Reposition on window resize
+    window.addEventListener('resize', positionTriangle);
+    
+    // Initialize all modules
+    initNavigation();
+    initParallax();
+    initCards();
 });
