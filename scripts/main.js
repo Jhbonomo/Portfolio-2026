@@ -166,42 +166,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Mobile scroll behavior - Intersection Observer
+    // Mobile - all cards always active
     if (window.innerWidth <= 912) {
-        const observerOptions = {
-            root: null,
-            rootMargin: '-45% 0px -45% 0px',
-            threshold: 0
-        };
-        
-        const cardScrollObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    updateCardActive(entry.target);
-                }
-            });
-        }, observerOptions);
-        
         cards.forEach(card => {
-            cardScrollObserver.observe(card);
+            card.classList.add('active');
         });
     }
-    
-    // Card entrance animations
-    const cardObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const index = Array.from(cards).indexOf(entry.target);
-                setTimeout(() => {
-                    entry.target.classList.add('visible');
-                }, index * 150);
-            } else {
-                entry.target.classList.remove('visible');
-            }
-        });
-    }, { threshold: 0.2 });
-
-    cards.forEach(card => {
-        cardObserver.observe(card);
-    });
 });

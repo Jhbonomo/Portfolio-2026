@@ -330,17 +330,6 @@ body {
         flex-direction: column;
     }
     
-    /* Card entrance animation on scroll (mobile only) */
-    .card {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    
-    .card.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
     /* All cards use card-minor styling */
     .card-major {
         padding: var(--spacing-xs) var(--spacing-sm);
