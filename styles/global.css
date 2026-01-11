@@ -228,6 +228,12 @@ body {
     color: var(--color-text-secondary, #666);
     line-height: 1.6;
     margin-bottom: var(--spacing-md);
+    display: none;
+}
+
+.card:hover p,
+.card.active p {
+    display: block;
 }
 
 .read-case {
@@ -240,52 +246,17 @@ body {
     cursor: pointer;
     transition: opacity 0.4s ease;
     font-family: var(--font-family-base);
-    visibility: hidden;
-    opacity: 0;
-}
-
-.card:hover .read-case,
-.card.active .read-case {
-    visibility: visible;
-    opacity: 1;
 }
 
 .read-case:hover {
     opacity: 0.9;
 }
 
-/* Responsive Design */
+/* ==========================================================================
+   Responsive Design - Mobile (≤912px)
+   ========================================================================== */
 
-/* Tablet: Secondary cards stack vertically */
-@media (max-width: 900px) {
-    .secondary-cards {
-        grid-template-columns: 1fr;
-    }
-    
-    .image {
-        position: sticky;
-        top: 0;
-        min-height: 40vh;
-        max-height: 50vh;
-        z-index: 20;
-        flex-shrink: 0;
-        overflow: hidden;
-    }
-    
-    .image img,
-    .image video {
-        max-width: 70%;
-        max-height: 70%;
-        object-fit: contain;
-    }
-    
-    .project-cards {
-        position: relative;
-        z-index: 10;
-    }
-}
 
-/* Mobile: Full vertical stack */
 @media (max-width: 912px) {
     .cases {
         flex-direction: column;
@@ -323,12 +294,37 @@ body {
         flex-direction: column;
     }
     
+    /* All cards use card-minor styling */
+    .card-major {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .card-major h2 {
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+    
+    .card-major .card-tags {
+        margin-bottom: 6px;
+    }
+    
+    .card-major .tag {
+        font-size: 9px;
+        padding: 2px 6px;
+    }
+    
     .card p {
         display: none;
     }
     
+    .card:hover p,
     .card.active p {
         display: block;
+    }
+    
+    .read-case {
+        visibility: visible;
+        opacity: 1;
     }
     
     .card:hover,
@@ -352,16 +348,6 @@ body {
     
     .main-nav.repositioned {
         top: 10px;
-    }
-    
-    .card-major {
-        padding: var(--spacing-sm);
-    }
-}
-
-@media (max-width: 912px) {
-    .speech-bubble {
-        margin: 0 var(--spacing-sm);
     }
 }
 
