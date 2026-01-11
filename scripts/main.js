@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const wrapperSection = document.querySelector('.wrapper');
     
     // Smooth scroll function
-    function smoothScrollTo(targetPosition, duration = 1500) {
+    function smoothScrollTo(targetPosition, duration = 2000) {
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
         let startTime = null;
