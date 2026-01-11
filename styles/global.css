@@ -101,6 +101,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: var(--spacing-xl);
+    flex: 1;
 }
 
 .image img {
@@ -111,8 +112,113 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.project-cards {
+    flex: 1;
+    padding: var(--spacing-lg);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
 
+.card {
+    padding-left: var(--spacing-sm);
+    background-color: var(--color-bg-primary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    border-left: 3px solid transparent;
+    margin-left: -4px;
+}
 
+.card-major {
+    padding: var(--spacing-md);
+}
+
+.secondary-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-sm);
+}
+
+.card-minor {
+    padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.card-minor .card-tags {
+    margin-bottom: 6px;
+}
+
+.card-minor .tag {
+    font-size: 9px;
+    padding: 2px 6px;
+}
+
+.card-minor h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.card-minor p {
+    font-size: 12px;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.card:hover,
+.card.active {
+    border-left-color: var(--color-beige-dark);
+}
+
+.card-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 11px;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-beige-dark);
+    letter-spacing: 0.5px;
+    background-color: var(--color-beige-light);
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+
+.card h2 {
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-h2);
+}
+
+.card p {
+    color: var(--color-text-secondary, #666);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.read-case {
+    background-color: var(--color-beige);
+    color: var(--color-beige-dark);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: opacity 0.2s;
+    font-family: var(--font-family-base);
+    display: none;
+}
+
+.card:hover .read-case,
+.card.active .read-case {
+    display: inline-block;
+}
+
+.read-case:hover {
+    opacity: 0.9;
+}
 
 @media (max-width: 768px) {
     .speech-bubble {

@@ -18,6 +18,9 @@
     /* Colors - Brand */
     --color-about: #FF0000;
     --color-wrapper-bg: var(--color-about);
+    --color-beige-dark: #82510C;
+    --color-beige: #FEDF92;
+    --color-beige-light: #F3F3E9;
     
     /* Colors - Semantic */
     --color-text-primary: var(--color-gray-900);
