@@ -29,7 +29,10 @@ body {
     top: 20px;
     bottom: auto;
     position: fixed;
+}
 
+.main-nav.repositioned .nav-link {
+    font-size: var(--font-size-base);
 }
 
 .nav-link {
@@ -38,7 +41,7 @@ body {
     font-family: var(--font-family-serif);
     font-size: var(--font-size-nav);
     font-weight: var(--font-weight-bold);
-    transition: opacity 0.2s;
+    transition: opacity 0.2s, font-size 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
 }
 
@@ -105,6 +108,7 @@ body {
     justify-content: center;
     padding: var(--spacing-xl);
     flex: 1;
+    height: 100vh;
     transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -134,7 +138,6 @@ body {
 .project-cards {
     flex: 1;
     padding: var(--spacing-lg);
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
@@ -165,6 +168,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-sm);
+    overflow-y: auto;
+    max-height: calc(100vh - 300px);
+    padding-right: var(--spacing-xs);
 }
 
 .card-minor {
@@ -255,21 +261,58 @@ body {
     .secondary-cards {
         grid-template-columns: 1fr;
     }
+    
+    .image {
+        position: sticky;
+        top: 0;
+        min-height: 40vh;
+        max-height: 50vh;
+        z-index: 20;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+    
+    .image img,
+    .image video {
+        max-width: 70%;
+        max-height: 70%;
+        object-fit: contain;
+    }
+    
+    .project-cards {
+        position: relative;
+        z-index: 10;
+    }
 }
 
 /* Mobile: Full vertical stack */
-@media (max-width: 768px) {
+@media (max-width: 912px) {
     .cases {
         flex-direction: column;
         height: auto;
     }
     
     .image {
-        min-height: 50vh;
+        position: sticky;
+        top: 0;
+        min-height: 40vh;
+        max-height: 50vh;
         padding: var(--spacing-md);
+        z-index: 20;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+    
+    .image img,
+    .image video {
+        max-width: 65%;
+        max-height: 65%;
+        object-fit: contain;
     }
     
     .project-cards {
+        position: relative;
+        z-index: 10;
         padding: var(--spacing-md);
     }
     
@@ -296,7 +339,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 912px) {
     .speech-bubble {
         margin: 0 var(--spacing-sm);
     }
