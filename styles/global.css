@@ -248,6 +248,56 @@ body {
     opacity: 0.9;
 }
 
+/* Responsive Design */
+
+/* Tablet: Secondary cards stack vertically */
+@media (max-width: 900px) {
+    .secondary-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile: Full vertical stack */
+@media (max-width: 768px) {
+    .cases {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .image {
+        min-height: 50vh;
+        padding: var(--spacing-md);
+    }
+    
+    .project-cards {
+        padding: var(--spacing-md);
+    }
+    
+    .wrapper {
+        padding: var(--spacing-md);
+    }
+    
+    .speech-bubble {
+        margin: 0 var(--spacing-sm);
+        max-width: 100%;
+    }
+    
+    .main-nav {
+        bottom: 20px;
+        left: 20px;
+        gap: var(--spacing-sm);
+    }
+    
+    .main-nav.repositioned {
+        top: 10px;
+        left: 10px;
+    }
+    
+    .card-major {
+        padding: var(--spacing-sm);
+    }
+}
+
 @media (max-width: 768px) {
     .speech-bubble {
         margin: 0 var(--spacing-sm);
