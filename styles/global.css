@@ -451,3 +451,22 @@ p {
         margin-top: var(--spacing-sm);
     }
 }
+
+/* ==========================================================================
+   Responsive Design - Tablet (913px - 1024px)
+   ========================================================================== */
+
+@media (min-width: 913px) and (max-width: 1024px) {
+    .secondary-cards {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* ==========================================================================
+   Responsive Design - Desktop Large (≥1440px)
+   ========================================================================== */
+
+@media (min-width: 1440px) {
+    /* Large desktop specific styles */
+}
