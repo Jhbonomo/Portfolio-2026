@@ -107,7 +107,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: var(--spacing-xl);
-    flex: 1;
+    flex: 0 0 50%;
     height: 100vh;
     transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -266,7 +266,8 @@ body {
     .image {
         position: sticky;
         top: 0;
-        min-height: 40vh;
+        height: 50vh;
+        min-height: 50vh;
         max-height: 50vh;
         padding: var(--spacing-md);
         z-index: 20;
@@ -276,8 +277,8 @@ body {
     
     .image img,
     .image video {
-        max-width: 65%;
-        max-height: 65%;
+        max-width: 90%;
+        max-height: 90%;
         object-fit: contain;
     }
     
