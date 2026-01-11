@@ -31,6 +31,9 @@
     --spacing-md: 24px;
     --spacing-lg: 32px;
     --spacing-xl: 48px;
+    --spacing-2xl: 56px;
+    --spacing-3xl: 64px;
+
     
     /* Typography */
     --font-family-serif: 'Merriweather', serif;

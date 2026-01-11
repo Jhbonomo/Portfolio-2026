@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     const nav = document.querySelector('.main-nav');
     const casesSection = document.querySelector('.cases');
+    const wrapperSection = document.querySelector('.wrapper');
     
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -41,15 +42,40 @@ document.addEventListener('DOMContentLoaded', () => {
             // Adiciona active no link clicado
             link.classList.add('active');
             
-            // Se clicar em My Work, reposiciona o nav e faz scroll
+            // Se clicar em My Work, faz scroll para a seção cases
             if (link.getAttribute('href') === '#work') {
-                nav.classList.add('repositioned');
-                
-                // Scroll suave para a seção cases
                 if (casesSection) {
                     casesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }
+            
+            // Se clicar em About, faz scroll para a seção wrapper
+            if (link.getAttribute('href') === '#about') {
+                if (wrapperSection) {
+                    wrapperSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
         });
+    });
+    
+    // Animate nav on scroll
+    window.addEventListener('scroll', () => {
+        const casesTop = casesSection.getBoundingClientRect().top;
+        const aboutLink = document.querySelector('.nav-link[href="#about"]');
+        const workLink = document.querySelector('.nav-link[href="#work"]');
+        
+        if (casesTop <= 100) {
+            nav.classList.add('repositioned');
+            
+            // Atualiza active para My Work
+            navLinks.forEach(l => l.classList.remove('active'));
+            workLink.classList.add('active');
+        } else {
+            nav.classList.remove('repositioned');
+            
+            // Atualiza active para About
+            navLinks.forEach(l => l.classList.remove('active'));
+            aboutLink.classList.add('active');
+        }
     });
 });
