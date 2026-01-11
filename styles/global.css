@@ -21,6 +21,7 @@ body {
 
 h1, h2, h3 {
     font-family: var(--font-family-serif);
+    color: var(--color-gray-900);
 }
 
 h1 {
@@ -40,6 +41,7 @@ h3 {
 p {
     margin-bottom: var(--spacing-sm);
     line-height: 1.6;
+    color: var(--color-gray-700);
 }
 
 /* ==========================================================================
@@ -204,6 +206,8 @@ p {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
+    justify-content: flex-start;
+
 }
 
 .card {
@@ -236,7 +240,7 @@ p {
 }
 
 .card-major p {
-    font-size: 12px;
+    font-size: 20px;
     margin-bottom: 0;
     line-height: 1.4;
 }
@@ -245,6 +249,9 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xs);
+    align-items: stretch;
+    align-content: stretch;
+    height: -webkit-fill-available;
 }
 
 .card-minor {
@@ -297,7 +304,7 @@ p {
 
 .card h2 {
     margin-bottom: var(--spacing-sm);
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-h1);
     color: var(--color-gray-900);
 }
 
@@ -464,9 +471,36 @@ p {
 }
 
 /* ==========================================================================
+   Responsive Design - Desktop Medium (1025px - 1439px)
+   ========================================================================== */
+
+@media (min-width: 1025px) and (max-width: 1439px) {
+    .image {
+        flex: 0 0 50%;
+    }
+    
+    .project-cards {
+        flex: 0 0 50%;
+    }
+}
+
+/* ==========================================================================
    Responsive Design - Desktop Large (≥1440px)
    ========================================================================== */
 
 @media (min-width: 1440px) {
-    /* Large desktop specific styles */
+    .image {
+        flex: 0 0 50%;
+    }
+    
+    .project-cards {
+        flex: 0 0 50%;
+        padding: var(--spacing-lg);
+    }
+    .card-minor h3 {
+        font-size: 20px;
+    }
+        .card-minor p {
+        font-size: 14px;
+    }
 }
