@@ -12,8 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: var(--color-bg-secondary);
+    justify-content: center;;
 }
 /* Navigation */
 .main-nav {
@@ -373,7 +372,7 @@ body {
     
     .wrapper {
         height: auto;
-        min-height: 100dvh;
+        min-height: 100d    vh;
         padding: var(--spacing-md);
         padding-bottom: var(--spacing-md);
     }
