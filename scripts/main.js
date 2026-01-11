@@ -78,4 +78,73 @@ document.addEventListener('DOMContentLoaded', () => {
             aboutLink.classList.add('active');
         }
     });
+    
+    // Card hover interactions with video support
+    const cards = document.querySelectorAll('.card');
+    const imageContainer = document.querySelector('.image');
+    let currentMediaElement = document.querySelector('.image img');
+    
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            // Remove active from all cards
+            cards.forEach(c => c.classList.remove('active'));
+            
+            // Add active to hovered card
+            card.classList.add('active');
+            
+            // Get card data
+            const mediaSrc = card.dataset.image || card.dataset.video;
+            const mediaType = card.dataset.mediaType || 'image';
+            const newBgColor = card.dataset.bgcolor;
+            const aspectRatio = card.dataset.aspectRatio || 'default';
+            
+            if (mediaSrc && currentMediaElement) {
+                // Fade out current media
+                currentMediaElement.style.opacity = '0';
+                
+                setTimeout(() => {
+                    // Check if we need to switch between image and video
+                    if (mediaType === 'video' && currentMediaElement.tagName !== 'VIDEO') {
+                        // Replace img with video
+                        const videoElement = document.createElement('video');
+                        videoElement.src = mediaSrc;
+                        videoElement.autoplay = true;
+                        videoElement.loop = true;
+                        videoElement.muted = true;
+                        videoElement.className = aspectRatio;
+                        currentMediaElement.replaceWith(videoElement);
+                        currentMediaElement = videoElement;
+                        
+                        setTimeout(() => {
+                            videoElement.style.opacity = '1';
+                        }, 50);
+                    } else if (mediaType === 'image' && currentMediaElement.tagName !== 'IMG') {
+                        // Replace video with img
+                        const imgElement = document.createElement('img');
+                        imgElement.src = mediaSrc;
+                        imgElement.alt = 'Project preview';
+                        imgElement.className = aspectRatio;
+                        currentMediaElement.replaceWith(imgElement);
+                        currentMediaElement = imgElement;
+                        
+                        setTimeout(() => {
+                            imgElement.style.opacity = '1';
+                        }, 50);
+                    } else {
+                        // Same media type, just update src and class
+                        currentMediaElement.src = mediaSrc;
+                        currentMediaElement.className = aspectRatio;
+                        setTimeout(() => {
+                            currentMediaElement.style.opacity = '1';
+                        }, 50);
+                    }
+                }, 300);
+            }
+            
+            // Update background color
+            if (newBgColor) {
+                imageContainer.style.backgroundColor = newBgColor;
+            }
+        });
+    });
 });
