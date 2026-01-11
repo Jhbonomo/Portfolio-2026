@@ -25,4 +25,31 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Reposiciona ao redimensionar a janela
     window.addEventListener('resize', positionTriangle);
+    
+    // Adiciona evento de click nos links de navegação
+    const navLinks = document.querySelectorAll('.nav-link');
+    const nav = document.querySelector('.main-nav');
+    const casesSection = document.querySelector('.cases');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Remove active de todos
+            navLinks.forEach(l => l.classList.remove('active'));
+            
+            // Adiciona active no link clicado
+            link.classList.add('active');
+            
+            // Se clicar em My Work, reposiciona o nav e faz scroll
+            if (link.getAttribute('href') === '#work') {
+                nav.classList.add('repositioned');
+                
+                // Scroll suave para a seção cases
+                if (casesSection) {
+                    casesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
 });
