@@ -1,3 +1,100 @@
+/* HERO WRAPPER STYLES */
+.hero-wrapper {
+    width: 100vw;
+    background: #111;
+    color: #fff;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-sm)
+}
+
+.sticky-back {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #111;
+    padding: 1.5rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    max-width: 1000px;
+}
+
+.hero-flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.article-hero {
+    max-width: 1000px;
+        display: flex;
+    flex-direction: column;
+}
+
+.hero-image-container {
+    flex: 1 1 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 320px;
+}
+
+.article-hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+}
+
+.hero-text {
+    flex: 2 1 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 600px;
+    flex: 0 0  50%;
+}
+
+.article-title {
+    color: #fff;
+    font-size: 2.5rem;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text .article-intro {
+    color: #e0e0e0;
+    font-size: 1.25rem;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+@media (max-width: 900px) {
+    .hero-flex-row {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem 0.5rem 0 0.5rem;
+
+
+    }
+    .hero-image-container {
+        min-width: 0;
+    }
+    .hero-text {
+        max-width: 100%;
+    }
+}
 /* Article Page Styles */
 
 /* Entrance Animations */
@@ -107,11 +204,8 @@
 
 /* Hero Image */
 .hero-image-container {
-    height: 50vh;
     width: 100%;
     max-width: 1400px;
-    margin: 0 auto var(--spacing-2xl);
-    padding: 0 var(--spacing-lg);
     display: flex;
     align-items: center;
     justify-content: center;
