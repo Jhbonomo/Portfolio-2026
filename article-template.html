@@ -33,25 +33,33 @@
             <div class="article-hero">                    
                 <h1 class="article-title">Improvements in mobile apps for Black Friday Optimization</h1>
 
-            <div class="hero-flex-row">
-                <div class="hero-image-container">
-                    <figure class="article-hero-image">
-                        <img src="images/via-3apps.png" alt="Via retail app Black Friday optimization">
-                    </figure>
-                </div>
-                <div class="hero-text">
-                    <p class="article-intro">
-                        Improved key journeys ahead of Black Friday, reducing bounce rate, increasing product discoverability and accessibility. In addition, contributed to Via's UX Design Tribe, supporting user research and design critiques.
-                    </p>
-                </div>
-            </div>
+                    <div class="hero-flex-row">
+                        <div class="hero-image-container">
+                            <figure class="article-hero-image">
+                                <img src="images/via-3apps.png" alt="Via retail app Black Friday optimization">
+                            </figure>
+                        </div>
+                        <div class="hero-text">
+                            <p class="article-intro">
+                                Improved key journeys ahead of Black Friday, reducing bounce rate, increasing product discoverability and accessibility. In addition, contributed to Via's UX Design Tribe, supporting user research and design critiques.
+                            </p>
+                            <button class="scroll-down-btn" aria-label="Scroll down" onclick="scrollToNextSection()">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="24" cy="24" r="22" stroke="#FFE082" stroke-width="4" fill="#111"/>
+                                    <path d="M16 22L24 30L32 22" stroke="#FFE082" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                <!-- Removed duplicated hero-flex-row -->
             </div>
         </div>
 
         <!-- Article Content -->
         <div class="article-content">
-            <section class="content-section">
-                <h2>Overview</h2>
+                <section id="overview" class="content-section">
+                    <h2>Overview</h2>
                 <div class="project-details">
                     <div class="detail-item">
                         <h3>Role</h3>
@@ -180,5 +188,13 @@
     </footer>
     
     <script src="scripts/article.js"></script>
+    <script>
+    function scrollToNextSection() {
+            const nextSection = document.getElementById('overview');
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+    </script>
 </body>
 </html>
