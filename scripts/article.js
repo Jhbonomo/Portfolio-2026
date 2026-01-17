@@ -45,7 +45,7 @@ function createReadingProgress() {
         top: 0;
         left: 0;
         width: 0%;
-        height: 3px;
+        height: 6px;
         background: linear-gradient(90deg, #8B5CF6, #EC4899);
         z-index: 1000;
         transition: width 0.1s ease;
