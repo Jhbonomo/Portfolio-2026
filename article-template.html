@@ -16,12 +16,7 @@
 </head>
 
 <body>
-    <article class="case-study">
-        <!-- Hero Section -->
-
-        <!-- HERO WRAPPER -->
-        <div class="hero-wrapper">
-            <div class="sticky-back">
+    <div class="sticky-back">
                 <a href="index.html" class="back-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -35,6 +30,12 @@
                     <span class="tag">MOBILE APP</span>
                 </div>
             </div>
+    <article class="case-study">
+        <!-- Hero Section -->
+
+        <!-- HERO WRAPPER -->
+        <div class="hero-wrapper">
+            
             <div class="article-hero">
                 <h1 class="article-title">Improvements in mobile apps for Black Friday Optimization</h1>
 
@@ -207,12 +208,18 @@
 
     <script src="scripts/article.js"></script>
     <script>
-        function scrollToNextSection() {
-            const nextSection = document.getElementById('overview');
-            if (nextSection) {
-                nextSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
+    document.querySelector('.scroll-down-btn').addEventListener('click', function() {
+       
+       const extraOffset = 32;
+        const target = document.getElementById('overview');
+        const stickyNav = document.querySelector('.sticky-back');
+        const navHeight = stickyNav ? stickyNav.offsetHeight : 0;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - extraOffset;
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    });
     </script>
 </body>
 

@@ -39,7 +39,6 @@
     align-items: center;
     justify-content: space-between;
     width:100%;
-    max-width: 1000px;
 }
 
 .hero-flex-row {
@@ -145,7 +144,7 @@
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-xs);
-    color: var(--text-primary);
+    color: #FFFFFF;
     text-decoration: none;
     font-family: var(--font-sans);
     font-weight: 500;
