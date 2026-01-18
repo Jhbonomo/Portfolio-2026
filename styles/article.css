@@ -251,15 +251,17 @@
     padding: var(--spacing-xl) var(--spacing-sm);
 }
 
-.content-section {
-    margin-bottom: var(--spacing-2xl);
+#overview {
+   background-color: #F3F3E9;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--spacing-sm)
 }
 
 .content-section h2 {
     font-family: var(--font-serif);
     font-size: 2rem;
     font-weight: 700;
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-sm) 0;
     color: var(--text-primary);
 }
 
@@ -277,7 +279,7 @@
     font-size: 1.125rem;
     line-height: 1.8;
     color: var(--text-primary);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
 }
 
 .content-section ul {
@@ -298,7 +300,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--spacing-lg);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-sm) 0;
     background-color: var(--surface-secondary);
     border-radius: 8px;
 }
@@ -310,7 +312,7 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--text-secondary);
-    margin: 0 0 var(--spacing-xs) 0;
+    margin: 0;
 }
 
 .detail-item p {
@@ -326,6 +328,10 @@
     margin-left: calc(var(--spacing-lg) * -1);
     margin-right: calc(var(--spacing-lg) * -1);
     margin-bottom: var(--spacing-2xl);
+        display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .article-image img {
@@ -333,6 +339,7 @@
     height: auto;
     border-radius: 8px;
     display: block;
+    max-width: 600px;
 }
 
 .article-image figcaption {
@@ -340,7 +347,6 @@
     font-size: 0.875rem;
     color: var(--text-secondary);
     text-align: center;
-    margin-top: var(--spacing-md);
     padding: 0 var(--spacing-lg);
 }
 
