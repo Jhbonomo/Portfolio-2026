@@ -545,27 +545,29 @@ p {
     .project-cards {
         flex: 0 0 50%;
         padding: var(--spacing-lg);
+        padding: var(--spacing-3xl);
+        justify-content: space-around
     }
     
     /* Larger font sizes for card-major */
     .card-major h2 {
-        font-size: 32px;
+        font-size: 48px;
         margin-bottom: 12px;
     }
     
     .card-major p {
-        font-size: 24px;
+        font-size: 28px;
         line-height: 1.5;
     }
     
     /* Larger font sizes for card-minor */
     .card-minor h3 {
-        font-size: 24px;
-        margin-bottom: 10px;
+        font-size: 32px;
+        margin-bottom: 16px;
     }
     
     .card-minor p {
-        font-size: 16px;
+        font-size: 20px;
         line-height: 1.5;
     }
     
