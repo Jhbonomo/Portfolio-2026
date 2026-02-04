@@ -179,7 +179,6 @@ p {
     max-height: 90%;
     object-fit: contain;
     border-radius: 8px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     transition: opacity 0.5s ease;
 }
 
