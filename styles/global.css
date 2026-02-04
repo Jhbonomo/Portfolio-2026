@@ -409,14 +409,25 @@ p {
     }
     
     .card-major h2 {
-        font-size: 16px;
+        font-size: 32px;
         margin-bottom: 8px;
     }
     
     .card-major p {
-        font-size: 12px;
+        font-size: 16px;
         line-height: 1.4;
     }
+
+    .card-minor h3 {
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+    
+    .card-minor p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
     
     /* Show all card descriptions on mobile */
     .card p {
