@@ -168,7 +168,7 @@ p {
     align-items: center;
     justify-content: center;
     padding: var(--spacing-xl);
-    flex: 0 0 40%;
+    flex: 0 0 50%;
     height: 100vh;
     transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -200,7 +200,7 @@ p {
    ========================================================================== */
 
 .project-cards {
-    flex: 0 0 60%;
+    flex: 0 0 50%;
     padding: var(--spacing-lg);
     display: flex;
     flex-direction: column;
@@ -230,7 +230,7 @@ p {
 }
 
 .card-major .tag {
-    font-size: 9px;
+    font-size: 14px;
     padding: 2px 6px;
 }
 
@@ -248,10 +248,9 @@ p {
 .secondary-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xs);
+    gap: var(--spacing-md);
     align-items: stretch;
     align-content: stretch;
-    height: -webkit-fill-available;
 }
 
 .card-minor {
@@ -265,7 +264,7 @@ p {
 }
 
 .card-minor .tag {
-    font-size: 9px;
+    font-size: 13px;
     padding: 2px 6px;
 }
 
@@ -354,10 +353,10 @@ p {
 }
 
 /* ==========================================================================
-   Responsive Design - Mobile (≤912px)
+   Responsive Design - Mobile (lg: ≤1024px)
    ========================================================================== */
 
-@media (max-width: 912px) {
+@media (max-width: 1024px) {
     .cases {
         flex-direction: column;
         height: auto;
@@ -509,21 +508,14 @@ p {
 }
 
 /* ==========================================================================
-   Responsive Design - Tablet (913px - 1024px)
+   Responsive Design - Desktop Medium (xl: 1025px - 1280px)
    ========================================================================== */
 
-@media (min-width: 913px) and (max-width: 1024px) {
+@media (min-width: 1025px) and (max-width: 1280px) {
     .secondary-cards {
         display: flex;
         flex-direction: column;
     }
-}
-
-/* ==========================================================================
-   Responsive Design - Desktop Medium (1025px - 1439px)
-   ========================================================================== */
-
-@media (min-width: 1025px) and (max-width: 1439px) {
     .image {
         flex: 0 0 50%;
     }
@@ -534,40 +526,40 @@ p {
 }
 
 /* ==========================================================================
-   Responsive Design - Desktop Large (≥1440px)
+   Responsive Design - Desktop Large (2xl: ≥1536px)
    ========================================================================== */
 
-@media (min-width: 1440px) {
+@media (min-width: 1536px) {
     .image {
-        flex: 0 0 50%;
+        flex: 0 0 40%;
     }
     
     .project-cards {
-        flex: 0 0 50%;
+        flex: 0 0 60%;
         padding: var(--spacing-lg);
         padding: var(--spacing-3xl);
-        justify-content: space-around
+        justify-content: space-around;
     }
     
     /* Larger font sizes for card-major */
     .card-major h2 {
-        font-size: 48px;
+        font-size: 40px;
         margin-bottom: 12px;
     }
     
     .card-major p {
-        font-size: 28px;
+        font-size: 20px;
         line-height: 1.5;
     }
     
     /* Larger font sizes for card-minor */
     .card-minor h3 {
-        font-size: 32px;
+        font-size: 24px;
         margin-bottom: 16px;
     }
     
     .card-minor p {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1.5;
     }
     

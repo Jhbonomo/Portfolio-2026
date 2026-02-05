@@ -1,0 +1,444 @@
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+
+.accordion-section * {
+  box-sizing: border-box;
+}
+
+.accordion-section {
+  font-family: 'Zilla Slab', serif;
+  line-height: 1.6;
+  color: #2c2c2c;
+  background-color: #fafafa;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c2c2c;
+  font-family: 'Zilla Slab', serif;
+}
+
+.accordion-intro {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #495057;
+  font-family: 'Zilla Slab', serif;
+}
+
+/* ==========================================================================
+   ACCORDION STYLES
+   ========================================================================== */
+
+.accordion-container {
+  margin: 1rem 0;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.accordion {
+  background-color: #ffffff;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #dee2e6;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.accordion-header:hover {
+  background-color: #f8f9fa;
+}
+
+.accordion-header h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c2c2c;
+  margin: 0;
+}
+
+.accordion-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6c757d;
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background-color: #ffffff;
+  border: none !important;
+}
+
+.accordion-content.expanded {
+  max-height: none;
+  padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.accordion-content p {
+  margin: 0 0 0.75rem 0;
+  line-height: 1.6;
+  color: #495057;
+  font-family: 'Zilla Slab', serif;
+}
+
+.accordion-content p p {
+  margin-bottom: 0.5rem;
+}
+
+.accordion-content p p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   BUTTON STYLES
+   ========================================================================== */
+
+.accordion-button-container {
+  margin-bottom: 1rem;
+}
+
+.accordion-font-reset-btn {
+  font-family: 'Zilla Slab', serif;
+  background: hsl(120, 100%, 50%);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 0.5rem;
+}
+
+.accordion-font-reset-btn:hover {
+  background: hsl(120, 100%, 70%);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.accordion-font-reset-btn:active {
+  transform: translateY(0);
+}
+
+.accordion-font-change-btn {
+  font-family: 'Zilla Slab', serif;
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.accordion-font-change-btn:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.accordion-font-change-btn:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   SWITCH COMPONENT STYLES
+   ========================================================================== */
+
+.accordion-switch-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.accordion-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.accordion-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.accordion-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.accordion-slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.accordion-switch input:checked + .accordion-slider {
+  background-color: hsl(120, 100%, 50%);
+}
+
+.accordion-switch input:checked + .accordion-slider:before {
+  transform: translateX(26px);
+}
+
+.accordion-switch-label {
+  font-family: 'Zilla Slab', serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #495057;
+}
+
+/* ==========================================================================
+   PATTERN GAME STYLES
+   ========================================================================== */
+
+.accordion-pattern-game-container {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.accordion-game-instructions {
+  margin-bottom: 1rem;
+}
+
+.accordion-game-instructions p {
+  font-family: 'Zilla Slab', serif;
+  font-size: 0.9rem;
+  color: #495057;
+  margin: 0;
+}
+
+.accordion-game-area {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: #ffffff;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.accordion-game-dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ff6b6b;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+  z-index: 2;
+}
+
+.accordion-game-target {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #51cf66;
+  border-radius: 50%;
+  top: 20%;
+  right: 20%;
+  border: 3px solid #2f9e44;
+  z-index: 1;
+}
+
+/* On-screen arrow controls */
+.accordion-on-screen-controls {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  z-index: 10;
+}
+
+.accordion-arrow-row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.accordion-arrow-btn {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #007bff;
+  background: rgba(255, 255, 255, 0.9);
+  color: #007bff;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  backdrop-filter: blur(2px);
+}
+
+.accordion-arrow-btn:hover {
+  background: #007bff;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.accordion-arrow-btn:active {
+  transform: scale(0.95);
+  background: #0056b3;
+}
+
+.accordion-arrow-btn:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE STYLES
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .accordion-section {
+    padding: 1rem;
+  }
+
+  .accordion-h1 {
+    font-size: 1.5rem;
+  }
+
+  .accordion-intro {
+    font-size: 1rem;
+  }
+
+  .accordion-header {
+    padding: 0.5rem 1rem;
+  }
+
+  .accordion-header h4 {
+    font-size: 1rem;
+  }
+
+  .accordion-content.expanded {
+    padding: 0 1rem 0.75rem 1rem;
+  }
+
+  .accordion-pattern-game-container {
+    padding: 0.75rem;
+    margin: 1rem 0;
+  }
+
+  .accordion-game-area {
+    min-height: 300px;
+    touch-action: none;
+    height: 300px;
+  }
+
+  .accordion-game-dot,
+  .accordion-game-target {
+    width: 24px;
+    height: 24px;
+    transition: all 0.2s ease;
+  }
+
+  .accordion-game-dot {
+    border: 2px solid #e03131;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .accordion-game-target {
+    border: 2px solid #2f9e44;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .accordion-arrow-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    border-width: 2px;
+  }
+
+  .accordion-on-screen-controls {
+    bottom: 15px;
+    right: 15px;
+    gap: 0.3rem;
+  }
+
+  .accordion-arrow-row {
+    gap: 0.75rem;
+  }
+
+  .accordion-game-instructions p {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .accordion-switch-container {
+    margin-top: 1rem;
+  }
+
+  .accordion-switch-label {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .accordion-desktop-instructions {
+    display: none !important;
+  }
+
+  .accordion-mobile-instructions {
+    display: block !important;
+  }
+}

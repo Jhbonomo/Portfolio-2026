@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="accordion-styles.css">
+</head>
+<body>
+    <div class="accordion-section">
+        <h1 class="accordion-h1">Typography Interactive Accordion</h1>
+        <p class="accordion-intro">Our perception is shaped by how things are presented to us. The examples below show how small typography tweaks can change how a message is understood.</p>
+        
+        <!-- Accordion Section -->
+        <div class="accordion-container">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <h4>from Surface to sense</h4>
+                        <span class="accordion-icon">^</span>
+                    </div>
+                    <div class="accordion-content expanded">
+                        <div class="accordion-button-container" style="margin-top: 0.5rem">
+                            <button class="accordion-font-reset-btn" onclick="fixFontProperties('surface-sense-paragraph')">
+                                Fix text
+                            </button>
+                            <button class="accordion-font-change-btn" onclick="randomizeFontProperties('surface-sense-paragraph')">
+                                Mess it up
+                            </button>
+                        </div>
+                        <p id="surface-sense-paragraph">
+                            When the surface fails, the sense is lost. Low contrast, cramped letters, and noisy fonts hide the message. Clarity is not decoration, it is the first step to learning.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <h4>from rhythm to Context</h4>
+                        <span class="accordion-icon">v</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-switch-container">
+                            <label class="accordion-switch">
+                                <input type="checkbox" id="rhythmSwitch" />
+                                <span class="accordion-slider"></span>
+                            </label>
+                            <span class="accordion-switch-label">Provide Rhythm</span>
+                        </div>
+
+                        <p>
+                            We internalize through rhythm. Broken lines, awkward spacing, or endless walls of text disrupt understanding. Good rhythm guides the eye, turning fragments into context.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <h4>from pattern to meaning</h4>
+                        <span class="accordion-icon">v</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>
+                            Meaning lives in patterns. Confusing buttons, inconsistent icons, or vanishing controls block action. Clear patterns invite trust, they let us act, not guess.
+                        </p>
+
+                        <div class="accordion-pattern-game-container">
+                            <div class="accordion-game-instructions">
+                                <p class="accordion-desktop-instructions">
+                                    Use arrow keys to move the dot to the target:
+                                </p>
+                                <p class="accordion-mobile-instructions" style="display: none">
+                                    Swipe to move the dot to the target:
+                                </p>
+                            </div>
+                            <div class="accordion-game-area">
+                                <div id="gameDot" class="accordion-game-dot"></div>
+                                <div id="gameTarget" class="accordion-game-target"></div>
+                                <div class="accordion-on-screen-controls">
+                                    <div class="accordion-arrow-row">
+                                        <button class="accordion-arrow-btn" id="arrowUp" aria-label="Move up">↑</button>
+                                    </div>
+                                    <div class="accordion-arrow-row">
+                                        <button class="accordion-arrow-btn" id="arrowLeft" aria-label="Move left">←</button>
+                                        <button class="accordion-arrow-btn" id="arrowDown" aria-label="Move down">↓</button>
+                                        <button class="accordion-arrow-btn" id="arrowRight" aria-label="Move right">→</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-switch-container">
+                                <label class="accordion-switch">
+                                    <input type="checkbox" id="patternSwitch" />
+                                    <span class="accordion-slider"></span>
+                                </label>
+                                <span class="accordion-switch-label">Fix Keyboard Settings</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="accordion-script.js"></script>
+</body>
+</html>
