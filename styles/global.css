@@ -175,8 +175,8 @@ p {
 
 .image img,
 .image video {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 95%;
+    max-height: 95%;
     object-fit: contain;
     border-radius: 8px;
     transition: opacity 0.5s ease;
@@ -185,14 +185,14 @@ p {
 /* Support for different aspect ratios */
 .image img.portrait,
 .image video.portrait {
-    max-width: 60%;
-    max-height: 85%;
+    max-width: 5%;
+    max-height: 90%;
 }
 
 .image img.landscape,
 .image video.landscape {
-    max-width: 85%;
-    max-height: 70%;
+    max-width: 95%;
+    max-height: 85%;
 }
 
 /* ==========================================================================
