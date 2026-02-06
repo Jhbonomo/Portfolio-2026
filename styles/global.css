@@ -185,7 +185,7 @@ p {
 /* Support for different aspect ratios */
 .image img.portrait,
 .image video.portrait {
-    max-width: 5%;
+    max-width: 95%;
     max-height: 90%;
 }
 
