@@ -380,7 +380,6 @@ body {
     font-size: 1.125rem;
     line-height: 1.8;
     color: var(--text-primary);
-    margin-bottom: var(--spacing-md);
 }
 
 /* Project Details Grid */

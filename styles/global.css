@@ -78,7 +78,8 @@ p {
     opacity: 0.6;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus-visible {
     opacity: 0.8;
 }
 
@@ -146,7 +147,8 @@ p {
     transition: opacity 0.2s;
 }
 
-.contact a:hover {
+.contact a:hover,
+.contact a:focus-visible {
     opacity: 0.7;
 }
 
@@ -171,6 +173,7 @@ p {
     flex: 0 0 50%;
     height: 100vh;
     transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
+    contain: layout style paint;
 }
 
 .image img,
@@ -230,8 +233,9 @@ p {
 }
 
 .card-major .tag {
-    font-size: 14px;
-    padding: 2px 6px;
+    font-size: 12px;
+        padding: 4px 12px;
+    border-radius: 12px;
 }
 
 .card-major h2 {
@@ -261,11 +265,13 @@ p {
 
 .card-minor .card-tags {
     margin-bottom: 6px;
+
 }
 
 .card-minor .tag {
-    font-size: 13px;
-    padding: 2px 6px;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 12px;
 }
 
 .card-minor h3 {
@@ -280,6 +286,7 @@ p {
 }
 
 .card:hover,
+.card:focus-visible,
 .card.active {
     border-left-color: var(--color-beige-dark);
 }
@@ -329,19 +336,21 @@ p {
 }
 
 .read-case {
-    background-color: var(--color-beige-light);
     color: var(--color-beige-dark);
-    border: none;
-    padding: 4px 8px;
-    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+    border: 1px solid var(--color-beige);
+    padding: 8px 12px;
+    border-radius: 12px;
     font-weight: 800;
     cursor: pointer;
     transition: opacity 0.8s ease;
     font-family: var(--font-family-serif);
 }
 
-.read-case:hover {
-    background-color: var(--color-beige);
+.read-case:hover,
+.read-case:focus-visible {
+    background-color: var(--color-beige-light);
 }
 
 /* ==========================================================================
@@ -438,6 +447,8 @@ p {
     .read-case {
         visibility: visible;
         opacity: 1;
+        font-size: 14px;
+
     }
     
     .card:hover,
