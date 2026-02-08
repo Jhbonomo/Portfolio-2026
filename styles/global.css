@@ -380,7 +380,7 @@ p {
         padding: var(--spacing-md);
         z-index: 20;
         flex-shrink: 0;
-        overflow: hidden;
+        overflow: hidden; 
     }
     
     .image img,
