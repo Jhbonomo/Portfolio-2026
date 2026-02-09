@@ -522,8 +522,8 @@ p {
    Responsive Design - Desktop Medium (xl: 1025px - 1280px)
    ========================================================================== */
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-    .secondary-cards {
+@media (min-width: 1025px) and (max-width: 1535px) {
+    .secondary-cards {///
         display: flex;
         flex-direction: column;
     }
