@@ -170,26 +170,17 @@
             </figcaption>
           </figure>
           <p>
-            Looking across multiple years of data uncovered a clear story:
-            Quorum grew very fast and, tvery feature oriented, was adding new
-            features on the top of others without reviewing existing flows
+Looking across multiple years of data revealed a clear pattern: rapid, feature-driven growth led to new functionality being layered onto existing flows without revisiting them.          </p>
+          <p>
+   The same issues kept resurfacing, reflected in consistent usability scores. A closer look at the SUS statements pointed to the core problems: unnecessary complexity and steep learning curves.
+          
+  </p>
+
+          <p>
+            <strong>Unnecessary Complexity:</strong> Overly difficult workflows created hidden friction.
           </p>
           <p>
-            The same issues kept resurfacing, and usability scores followed
-            consistent patterns. A closer breakdown of the SUS statements
-            highlighted the real culprits: steep learning curves and
-            overwhelming complexity, both persisting as major barriers. I
-            summarized the problems in the following:
-          </p>
-          <p>
-            <strong>Unnecessary Complexity:</strong> Many workflows were more
-            difficult than they needed to be, creating friction and frustration
-            that went unnoticed internally.
-          </p>
-          <p>
-            <strong>Learnability Gap:</strong> The product was conceptually
-            challenging, raising barriers for new users and impacting long-term
-            engagement.
+            <strong>Learnability Gap:</strong>Conceptual complexity raised barriers for new users and hurt long-term engagement.
           </p>
           <figure class="article-image">
             <img
@@ -302,6 +293,40 @@
             workflows, enhancing familiar processes without forcing users to
             change how they work.
           </p>
+
+          <div style="position: relative; margin: 2rem 0;">
+            <video id="pacVideo" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" muted>
+              <source src="../images/AI - pac.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <button id="playAgainBtn" style="display: none; margin-top: 1rem; padding: 0.75rem 1.5rem; background: #000; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-family: 'Merriweather Sans', sans-serif; font-size: 0.9rem; font-weight: 500;">
+              Play Again
+            </button>
+          </div>
+
+          <script>
+            (function() {
+              const video = document.getElementById('pacVideo');
+              const playAgainBtn = document.getElementById('playAgainBtn');
+              
+              // Set playback speed to 3x and autoplay
+              video.playbackRate = 3.0;
+              video.play();
+              
+              // Show play again button when video ends
+              video.addEventListener('ended', function() {
+                playAgainBtn.style.display = 'block';
+              });
+              
+              // Play again functionality
+              playAgainBtn.addEventListener('click', function() {
+                playAgainBtn.style.display = 'none';
+                video.currentTime = 0;
+                video.play();
+              });
+            })();
+          </script>
+
           <p>
             Beyond AI explorations, I reimagined existing features to create
             more user-centered experiences by reorganizing the interface and
@@ -339,6 +364,40 @@
             feature-based pages that often trigger suggestions disconnected from
             user intent.
           </p>
+
+          <div style="position: relative; margin: 2rem 0;">
+            <video id="hubsVideo" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" muted>
+              <source src="../images/AI - Hubs.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <button id="hubsPlayAgainBtn" style="display: none; margin-top: 1rem; padding: 0.75rem 1.5rem; background: #000; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-family: 'Merriweather Sans', sans-serif; font-size: 0.9rem; font-weight: 500;">
+              Play Again
+            </button>
+          </div>
+
+          <script>
+            (function() {
+              const video = document.getElementById('hubsVideo');
+              const playAgainBtn = document.getElementById('hubsPlayAgainBtn');
+              
+              // Set playback speed to 3x and autoplay
+              video.playbackRate = 3.0;
+              video.play();
+              
+              // Show play again button when video ends
+              video.addEventListener('ended', function() {
+                playAgainBtn.style.display = 'block';
+              });
+              
+              // Play again functionality
+              playAgainBtn.addEventListener('click', function() {
+                playAgainBtn.style.display = 'none';
+                video.currentTime = 0;
+                video.play();
+              });
+            })();
+          </script>
+
           <h3>A company strategy workplace</h3>
           <p>
             The hardest part of defining a system-wide view was that
