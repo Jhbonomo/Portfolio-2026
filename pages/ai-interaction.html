@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="../styles/article.css" />
     <link rel="stylesheet" href="../styles/image-expander.css" />
     <link rel="stylesheet" href="../styles/mindmap-animation.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -114,14 +117,17 @@
           <h2>Overview</h2>
           <p class="overview-intro">
             This case is part of a broader effort to help Quorum navigate a
-            period of change driven by the introduction of AI.</p><p>
-              At the time, the
-            product had grown through rapid feature accumulation across policy
-            tracking, lobbying, advocacy, PAC, and compliance, resulting in
-            increasing complexity. AI intensified this challenge by introducing
-            new interaction patterns, uncertainty, and adoption risks. 
-            </p><p>As AI
-            became a strategic focus, the key question shifted from adding
+            period of change driven by the introduction of AI.
+          </p>
+          <p>
+            At the time, the product had grown through rapid feature
+            accumulation across policy tracking, lobbying, advocacy, PAC, and
+            compliance, resulting in increasing complexity. AI intensified this
+            challenge by introducing new interaction patterns, uncertainty, and
+            adoption risks.
+          </p>
+          <p>
+            As AI became a strategic focus, the key question shifted from adding
             intelligent features to defining how AI could genuinely support
             users. In response, product and design partnered to create a
             forward-looking “AIfied” vision, rethinking UX patterns for an
@@ -172,17 +178,26 @@
             </figcaption>
           </figure>
           <p>
-Looking across multiple years of data revealed a clear pattern: rapid, feature-driven growth led to new functionality being layered onto existing flows without revisiting them.          </p>
-          <p>
-   The same issues kept resurfacing, reflected in consistent usability scores. A closer look at the SUS statements pointed to the core problems: unnecessary complexity and steep learning curves.
-          
-  </p>
-
-          <p>
-            <strong>Unnecessary Complexity:</strong> Overly difficult workflows created hidden friction.
+            Looking across multiple years of data revealed a clear pattern:
+            rapid, feature-driven growth led to new functionality being layered
+            onto existing flows without revisiting them.
           </p>
           <p>
-            <strong>Learnability Gap:</strong>Conceptual complexity raised barriers for new users and hurt long-term engagement.
+            The same issues kept resurfacing, reflected in consistent usability
+            scores. A closer look at the SUS statements pointed to the core
+            problems: unnecessary complexity and steep learning curves.
+          </p>
+
+          <p>
+            <strong>Unnecessary Complexity:</strong> Overly difficult workflows
+            created hidden friction.
+          </p>
+          <p>
+            <strong>Learnability Gap:</strong>Conceptual complexity raised
+            barriers for new users and hurt long-term engagement.
+          </p>
+                    <p>
+      Beyond identifying core system issues, the annual survey provided a robust snapshot of Quorum’s key workflows and usage patterns, helping define opportunities and inform a navigation structure capable of supporting AI.
           </p>
           <figure class="article-image">
             <img
@@ -194,6 +209,7 @@ Looking across multiple years of data revealed a clear pattern: rapid, feature-d
               into qualitative feature assessment.
             </figcaption>
           </figure>
+
         </section>
 
         <section class="content-section">
@@ -240,14 +256,14 @@ Looking across multiple years of data revealed a clear pattern: rapid, feature-d
               alt="Small pills in the context of interaction drive new technology adoption"
             />
             <figcaption>
-              The bill key takeaway, an AI summary of bill, show how AI can enhance workflows by
-              delivering precise insights that save time to drive further AI
-              adoption.
+              The bill key takeaway, an AI summary of bill, show how AI can
+              enhance workflows by delivering precise insights that save time to
+              drive further AI adoption.
             </figcaption>
           </figure>
           <blockquote class="quote-highlight">
-            User quote: "The AI review right at the top of the page is the most useful to
-            me. I can get right to it and decide if I care or not"
+            User quote: "The AI review right at the top of the page is the most
+            useful to me. I can get right to it and decide if I care or not"
           </blockquote>
         </section>
 
@@ -285,7 +301,7 @@ Looking across multiple years of data revealed a clear pattern: rapid, feature-d
               enhance specific user workflows
             </li>
           </ul>
-                    <h3>Collaboration at play</h3>
+          <h3>Collaboration at play</h3>
           <p>
             As Product Design Manager, it became clear that shifting the company
             mindset toward being AI-driven required me to keep our team in sync
@@ -301,38 +317,60 @@ Looking across multiple years of data revealed a clear pattern: rapid, feature-d
           <h2>Core concepts</h2>
           <h3>AI that fits naturally into workflows</h3>
           <p>
-            AI should fit naturally into existing
-            workflows, enhancing familiar processes without forcing users to
-            change how they work.
+            AI should fit naturally into existing workflows, enhancing familiar
+            processes without forcing users to change how they work.
           </p>
 
-          <div style="position: relative; margin: 2rem 0;">
-            <video id="pacVideo" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" muted>
-              <source src="../images/AI - pac.mp4" type="video/mp4">
+          <div style="position: relative; margin: 2rem 0">
+            <video
+              id="pacVideo"
+              style="
+                width: 100%;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              "
+              muted
+            >
+              <source src="../images/AI - pac.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <button id="playAgainBtn" style="display: none; margin-top: 1rem; padding: 0.75rem 1.5rem; background: #000; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-family: 'Merriweather Sans', sans-serif; font-size: 0.9rem; font-weight: 500;">
+            <button
+              id="playAgainBtn"
+              style="
+                display: none;
+                margin-top: 1rem;
+                padding: 0.75rem 1.5rem;
+                background: #000;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-family: &quot;Merriweather Sans&quot;, sans-serif;
+                font-size: 0.9rem;
+                font-weight: 500;
+              "
+            >
               Play Again
             </button>
           </div>
 
           <script>
-            (function() {
-              const video = document.getElementById('pacVideo');
-              const playAgainBtn = document.getElementById('playAgainBtn');
-              
+            (function () {
+              const video = document.getElementById("pacVideo");
+              const playAgainBtn = document.getElementById("playAgainBtn");
+
               // Set playback speed to 3x and autoplay
               video.playbackRate = 3.0;
               video.play();
-              
+
               // Show play again button when video ends
-              video.addEventListener('ended', function() {
-                playAgainBtn.style.display = 'block';
+              video.addEventListener("ended", function () {
+                playAgainBtn.style.display = "block";
               });
-              
+
               // Play again functionality
-              playAgainBtn.addEventListener('click', function() {
-                playAgainBtn.style.display = 'none';
+              playAgainBtn.addEventListener("click", function () {
+                playAgainBtn.style.display = "none";
                 video.currentTime = 0;
                 video.play();
               });
@@ -343,43 +381,68 @@ Looking across multiple years of data revealed a clear pattern: rapid, feature-d
         <section class="content-section">
           <h3>New navigation based in Hubs</h3>
           <p>
-We reframed features as part of a continuous system, reorganizing navigation around four core workflows aligned with users' jobs to be done.
+            We reframed features as part of a continuous system, reorganizing
+            navigation around four core workflows aligned with users' jobs to be
+            done.
           </p>
           <p>
             This structure allowed AI to provide contextual suggestions without
-              overwhelming users. For example, recommendations surfaced within a
+            overwhelming users. For example, recommendations surfaced within a
             workflow hub are directly relevant to the task at hand, unlike
             feature-based pages that often trigger suggestions disconnected from
             user intent.
           </p>
 
-          <div style="position: relative; margin: 2rem 0;">
-            <video id="hubsVideo" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" muted>
-              <source src="../images/AI - Hubs.mp4" type="video/mp4">
+          <div style="position: relative; margin: 2rem 0">
+            <video
+              id="hubsVideo"
+              style="
+                width: 100%;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              "
+              muted
+            >
+              <source src="../images/AI - Hubs.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <button id="hubsPlayAgainBtn" style="display: none; margin-top: 1rem; padding: 0.75rem 1.5rem; background: #000; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-family: 'Merriweather Sans', sans-serif; font-size: 0.9rem; font-weight: 500;">
+            <button
+              id="hubsPlayAgainBtn"
+              style="
+                display: none;
+                margin-top: 1rem;
+                padding: 0.75rem 1.5rem;
+                background: #000;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-family: &quot;Merriweather Sans&quot;, sans-serif;
+                font-size: 0.9rem;
+                font-weight: 500;
+              "
+            >
               Play Again
             </button>
           </div>
 
           <script>
-            (function() {
-              const video = document.getElementById('hubsVideo');
-              const playAgainBtn = document.getElementById('hubsPlayAgainBtn');
-              
+            (function () {
+              const video = document.getElementById("hubsVideo");
+              const playAgainBtn = document.getElementById("hubsPlayAgainBtn");
+
               // Set playback speed to 3x and autoplay
               video.playbackRate = 3.0;
               video.play();
-              
+
               // Show play again button when video ends
-              video.addEventListener('ended', function() {
-                playAgainBtn.style.display = 'block';
+              video.addEventListener("ended", function () {
+                playAgainBtn.style.display = "block";
               });
-              
+
               // Play again functionality
-              playAgainBtn.addEventListener('click', function() {
-                playAgainBtn.style.display = 'none';
+              playAgainBtn.addEventListener("click", function () {
+                playAgainBtn.style.display = "none";
                 video.currentTime = 0;
                 video.play();
               });
@@ -418,7 +481,7 @@ We reframed features as part of a continuous system, reorganizing navigation aro
             into a single platform. This led to a fragmented domain view,
             obscuring a core workflow centered on system-wide visibility.
           </p>
-                    <div class="mindmap-container">
+          <div class="mindmap-container">
             <div class="mindmap-animation"></div>
           </div>
           <p>
@@ -443,8 +506,6 @@ We reframed features as part of a continuous system, reorganizing navigation aro
               Unified reporting system combining templates and workflows
             </figcaption>
           </figure>
-
-
         </section>
 
         <section class="content-section">
