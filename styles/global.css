@@ -524,7 +524,7 @@ p {
    ========================================================================== */
 
 @media (min-width: 1025px) and (max-width: 1535px) {
-    .secondary-cards {///
+    .secondary-cards {
         display: flex;
         flex-direction: column;
     }
