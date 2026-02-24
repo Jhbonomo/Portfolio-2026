@@ -104,6 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.card');
     const imageContainer = document.querySelector('.image');
     let mediaElement = document.querySelector('.image img');
+
+    // Card click navigation
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const href = card.dataset.href;
+            if (href) window.location.href = href;
+        });
+    });
     
     function updateCardActive(activeCard) {
         // Remove active from all cards
