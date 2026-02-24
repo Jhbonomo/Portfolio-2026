@@ -388,6 +388,7 @@ p {
     .cases {
         flex-direction: column;
         height: auto;
+        overflow: visible; /* Permite position:sticky no .image */
     }
     
     .image {

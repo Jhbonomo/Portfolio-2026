@@ -170,37 +170,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Desktop hover behavior
-    if (window.innerWidth > 912) {
+    if (window.innerWidth > 1024) {
         cards.forEach(card => {
             card.addEventListener('mouseenter', () => {
                 updateCardActive(card);
             });
         });
     }
-    
+
     // Mobile - scroll-triggered card switching
-    if (window.innerWidth <= 912) {
+    if (window.innerWidth <= 1024) {
         // Set initial active card
         if (cards.length > 0) {
             updateCardActive(cards[0]);
         }
-        
-        // Scroll listener to update active card based on position
+
+        // Scroll listener: ativa o card mais profundo cujo topo ainda está
+        // abaixo da imagem sticky (40vh), refletindo o que o usuário lê.
         window.addEventListener('scroll', () => {
-            const triggerPoint = window.innerHeight * 0.75; // 60% from top
-            
-            cards.forEach(card => {
-                const cardRect = card.getBoundingClientRect();
-                const cardCenter = cardRect.top + (cardRect.height / 2);
-                
-                // Check if card center is at or past the trigger point
-                if (cardCenter <= triggerPoint && cardCenter >= 0) {
-                    // Only update if this card is not already active
-                    if (!card.classList.contains('active')) {
-                        updateCardActive(card);
-                    }
+            const imageBottom = window.innerHeight * 0.42; // ligeiramente abaixo de 40vh
+            let activeCard = null;
+
+            for (const card of cards) {
+                const rect = card.getBoundingClientRect();
+                if (rect.top <= imageBottom) {
+                    activeCard = card;
                 }
-            });
-        });
+            }
+
+            if (activeCard && !activeCard.classList.contains('active')) {
+                updateCardActive(activeCard);
+            }
+        }, { passive: true });
     }
 });
