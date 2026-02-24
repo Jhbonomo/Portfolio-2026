@@ -1,5 +1,23 @@
 /* Global Styles */
 
+/* Skip link — visually hidden until focused via keyboard */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 0.75rem 1.5rem;
+    background: var(--color-gray-900, #111);
+    color: #fff;
+    font-size: var(--font-size-base, 1rem);
+    text-decoration: none;
+    z-index: 9999;
+    transition: top 0.1s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
