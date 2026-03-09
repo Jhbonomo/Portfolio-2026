@@ -414,7 +414,7 @@ p {
         position: relative;
         z-index: 10;
         padding: var(--spacing-xs);
-        padding-bottom: 40px;
+        padding-bottom: 60px;
     }
     
     .secondary-cards {
