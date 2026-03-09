@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Scroll listener: ativa o card mais profundo cujo topo ainda está
         // abaixo da imagem sticky (40vh), refletindo o que o usuário lê.
         window.addEventListener('scroll', () => {
-            const imageBottom = window.innerHeight * 0.42; // ligeiramente abaixo de 40vh
+            const imageBottom = window.innerHeight * 0.45; // ligeiramente abaixo de 40vh
             let activeCard = null;
 
             for (const card of cards) {
