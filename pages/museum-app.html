@@ -133,15 +133,19 @@
         <section class="content-section">
           <h2>Research Context</h2>
           <p>
-            Initially I had no access to stakeholders, therefore I began
-            exploring publicly available information about the museum to build a
-            solid foundation that would guide the decisions of my project.
+            Without direct access to stakeholders, I turned to desk research as
+            my primary method, combing through social media, YouTube channels,
+            webinars, press articles, academic papers, and the museum's own
+            digital publications to build a foundation for the project.
           </p>
           <p>
-            Fast, low-cost, great for spotting patterns and building context.
-            From scavenging social media, webinars to review formal reports,
-            competitor analysis, press articles, academic papers, all without
-            leaving your desk.
+            What emerged from that research was unexpected. Despite the closure,
+            the museum's educational community was remarkably active online.
+            Webinars, outreach initiatives, and ongoing publications made it
+            clear that people were deeply invested in keeping the museum's
+            intangible value alive, its knowledge, its networks, and its role
+            in public education well beyond the physical space and the burned
+            collections.
           </p>
           <figure class="article-image">
             <img
@@ -157,11 +161,15 @@
         <section class="content-section">
           <h2>Research Findings</h2>
           <p>
-            Benchmark research showed that most museum apps are designed to
-            guide visitors through exhibitions. However, during the restoration,
-            the National Museum could no longer rely on its physical space.
-            Instead, I uncovered its powerful educational outreach, rooted in a
-            vibrant community of educators, researchers, and the general public.
+            Benchmark research showed that most museum apps are built around the
+            physical visit, guiding users through exhibitions and collections
+            in-person. That model didn't apply here. The museum was closed and
+            its collection partially destroyed. But its educational section
+            hadn't stopped. It was the most active part of the institution
+            online: running programs, publishing content, and maintaining the
+            museum's presence in schools and the broader community. That gap
+            between what museum apps typically do and what this museum actually
+            needed became the core design opportunity.
           </p>
           <figure class="article-image">
             <img
@@ -199,65 +207,88 @@
         <section class="content-section">
           <h2>Designing the Solution</h2>
           <p>
-            Based on the discovery process, the app was designed to keep the
-            community informed and engaged with the museum's collections,
-            projects, campaigns, and events, while enabling teachers to access
-            and create educational content for classroom use or to be used in
-            the museum's educational initiative.
+            The research pointed to four distinct user groups, each with a
+            different relationship to the museum: the <strong>teacher</strong>,
+            who uses museum content to educate students; the
+            <strong>student</strong>, who consumes the app's educational
+            features; the <strong>researcher</strong>, typically a university
+            student who leverages the museum's knowledge and collections for
+            academic work; and the <strong>museum education staff</strong>,
+            responsible for creating lessons and maintaining the network between
+            the museum and schools.
           </p>
           <p>
-            The information architecture and the collections were organized in a
-            way it would be possible to attend the permanent collections but
-            also to lessons, providing educational content for teachers to use
-            in class.
+            The app was designed to serve all four. Anyone can browse the
+            museum's collections (botanic, zoological, archaeological...), but the
+            deeper experience is structured around education: lessons tied to
+            those collections, activities, and a calendar keeping the
+            community informed about ongoing museum programs.
           </p>
           <figure class="article-image">
-            <img src="../images/museu/userjourney.png" alt="User journey" />
+            <img src="../images/museu/userjourney.png" alt="User journey map showing the four user profiles and their paths through the app" />
             <figcaption>
-              Initial wireframes and user interface concepts.
+              User journey map: the four profiles (teacher, student, researcher,
+              museum staff) and their paths through the app's features.
             </figcaption>
           </figure>
           <h3>Key Design Decisions</h3>
           <ul>
             <li>
-              <strong>Community-First Approach:</strong> Prioritized keeping the
-              museum's community engaged and informed
+              <strong>Collections as learning units:</strong> Each museum
+              collection (botanic, zoological, etc.) is paired with educational
+              text and exercises, so it functions as both an archive and a
+              lesson resource
             </li>
             <li>
-              <strong>Educational Focus:</strong> Designed for teachers to
-              access and create educational content
+              <strong>Classroom management for teachers:</strong> Teachers
+              invite students into their class within the app, assign specific
+              collections or lessons, and track completion and assessment results
             </li>
             <li>
-              <strong>Digital Transformation:</strong> Turned physical
-              limitations into digital opportunities
+              <strong>Content creation for museum staff:</strong> The museum's
+              education section can create and publish lesson plans directly
+              linked to collections, establishing the content network between
+              institution and schools
             </li>
             <li>
-              <strong>Accessibility:</strong> Made museum resources available
-              anytime, anywhere
+              <strong>Activity calendar:</strong> A shared calendar of museum
+              events and programs to keep the broader community connected to the
+              museum's ongoing presence, even without a physical space to visit
             </li>
           </ul>
           <h3>User journeys and Wireframing</h3>
           <p>
-            The information architecture and the collections were organized in a
-            way it would be possible to attend the permanent collections but
-            also to create educational unities to provide educational content
-            for teachers to use in class.
+            The starting point was mapping what the museum was already doing
+            digitally: a static website with article-based content and
+            described collections and translating that into dynamic user
+            flows. The primary journey followed a teacher from discovering a
+            relevant museum collection to assigning it as a lesson to their
+            students. A parallel flow mapped how museum education staff would
+            create and publish that content in the first place. These two flows
+            shaped the information architecture and the relationship between the
+            collections, lessons, and classroom layers of the app.
           </p>
           <figure class="article-image">
             <img
               src="../images/museu/museu_02.png"
-              alt="wireframing for the museum app"
+              alt="Wireframes for the museum app's main flows"
             />
             <figcaption>
-              User journey and wireframing process for the educational app
+              Wireframes mapping the teacher flow (finding collections, assigning
+              lessons) and the museum staff flow (creating content and lessons).
             </figcaption>
           </figure>
           <h3>Prototype</h3>
           <p>
-            The information architecture and the collections were organized in a
-            way it would be possible to attend the permanent collections but
-            also to create educational unities to provide educational content
-            for teachers to use in class.
+            The prototype demonstrated the full student-to-teacher cycle: a
+            student opens the app and can freely browse collections, but if
+            enrolled in a class, they see assigned lessons tied to specific
+            collections. They complete the lesson, answer exercises, and the
+            teacher receives that assessment data. On the teacher side, the flow
+            starts by creating a class, inviting students, and selecting which
+            museum collection or lesson to assign, giving teachers a structured
+            way to bring museum content into the classroom without needing to
+            visit the physical museum.
           </p>
           <figure class="article-image">
             <img
@@ -279,29 +310,48 @@
         <section class="content-section">
           <h2>Reflection & Learnings</h2>
           <p>
-            As part of an educational project, I initially planned to reuse my
-            existing design knowledge. However, working without direct access to
-            stakeholders challenged that approach and highlighted the importance
-            of rigorous secondary research. This experience taught me how to
-            build a strong foundation using publicly available information.
+            When I started this project, I assumed the design challenge would be
+            about the museum's collections and how to digitally preserve and
+            present what survived. But the research forced a pivot. With the
+            physical space closed and part of the collection gone, the most
+            alive thing about the museum was its community. That shift from
+            designing around artifacts to designing around people and their
+            ongoing practices was the defining moment of the project.
+          </p>
+          <p>
+            Having indirect contact with one stakeholder from the museum's
+            education section helped ground the project's requirements. But
+            given more time, the first thing I would validate is access among
+            public school teachers. They're the primary users, and many of their
+            students face real barriers to digital literacy and device access,
+            constraints that would meaningfully shape the app's complexity,
+            onboarding, and offline considerations.
           </p>
           <h3>Key Learnings</h3>
           <ul>
             <li>
-              <strong>Adaptation in Crisis:</strong> Discovering new opportunities by addressing everyday needs in moments of change
+              <strong>The pivot is the research:</strong> The most important
+              design decision wasn't a UI choice, it was realizing the museum's
+              value lived in its educational community and not its physical space.
+              That reframing came entirely from desk research.
             </li>
             <li>
-              <strong>Secondary Research Value:</strong> The power of
-              comprehensive desk research to build context
+              <strong>Secondary research as a design tool:</strong> Without
+              direct user access, public information such as webinars, YouTube
+              channels, social media, and other publications can reveal genuine needs
+              and active communities that shape a project's direction
             </li>
             <li>
-              <strong>Community-Centered Design:</strong> The importance of
-              serving existing communities rather than just creating new
-              features
+              <strong>Serving what already exists:</strong> The educational
+              programs weren't invented for this app, they were already
+              happening. The design job was to support and extend them, not
+              create something new from scratch
             </li>
             <li>
-              <strong>Digital Transformation:</strong> How technology can
-              preserve and extend cultural heritage
+              <strong>Context shapes constraints:</strong> Designing for public
+              school teachers means accounting for unequal access to technology
+              among students, a real constraint that would need to be
+              front-loaded in any future iteration
             </li>
           </ul>
         </section>
