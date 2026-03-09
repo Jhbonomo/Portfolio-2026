@@ -171,6 +171,12 @@ body {
         padding: 1.25rem;
     }
 }
+
+@media (max-width: 600px) {
+    .project-details-hero {
+        grid-template-columns: 1fr;
+    }
+}
 /* Article Page Styles */
 
 /* Entrance Animations */
