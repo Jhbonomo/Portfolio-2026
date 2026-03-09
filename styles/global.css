@@ -440,7 +440,7 @@ p {
     }
     
     .card-major .tag {
-        font-size: 9px;
+        font-size: 11px;
         padding: 2px 6px;
     }
     
@@ -452,6 +452,11 @@ p {
     .card-major p {
         font-size: 16px;
         line-height: 1.4;
+    }
+
+    .card-minor .tag {
+        font-size: 11px;
+        padding: 2px 6px;
     }
 
     .card-minor h3 {
