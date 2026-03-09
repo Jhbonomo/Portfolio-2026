@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 9999;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -21,42 +21,47 @@
 
 .image-modal-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    width: 95vw;
+    height: 95vh;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     animation: zoomIn 0.3s ease;
 }
 
 .image-modal-img {
-    width: 100%;
-    height: 100%;
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: calc(95vw - 48px);
+    max-height: calc(95vh - 48px);
     object-fit: contain;
     border-radius: 4px;
 }
 
 .image-modal-close {
     position: absolute;
-    top: -40px;
-    right: 0;
-    font-size: 40px;
+    top: 16px;
+    right: 16px;
+    font-size: 28px;
     font-weight: bold;
-    color: white;
+    color: #333;
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease, opacity 0.2s ease;
+    z-index: 1;
 }
 
 .image-modal-close:hover {
     transform: scale(1.1);
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 @keyframes zoomIn {
@@ -86,16 +91,13 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .image-modal-close {
-        top: 10px;
-        right: 10px;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
-        font-size: 30px;
-    }
-    
     .image-modal-content {
-        max-width: 95%;
-        max-height: 95%;
+        width: 92vw;
+        height: 88vh;
+    }
+
+    .image-modal-img {
+        max-width: calc(92vw - 32px);
+        max-height: calc(88vh - 32px);
     }
 }
