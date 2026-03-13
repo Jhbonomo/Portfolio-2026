@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/tokens.css">
     <link rel="stylesheet" href="styles/global.css">
 </head>
+
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <section class="wrapper">
         <div class="speech-bubble">
             <h1>Welcome to my Portfolio!</h1>
-            <p>I'm Juliana, a Product Designer based in Brazil, with over a decade of experience designing digital products across platforms and industries.</p>
-            <p>From SaaS and mobile apps to complex government and educational systems, my work sits at bridging the gap between complex logic and user-friendly design.</p>
-            <p class="contact"><strong>Get in touch:</strong> <a href="https://www.linkedin.com/in/julianahb/" target="_blank" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a></p>
+            <p>I'm Juliana, a UX Researcher and Product Designer based in Brazil.
+            </p>
+            <p>I've worked across a range of digital products, from consumer facing platforms like e-commerce and mobile apps to
+                B2B and SaaS solutions in complex sectors such as government and education.
+            </p>
+            <p>My work combines research, strategy, and product design to make complex systems clear, usable, and
+                meaningful. </p>
+            <p class="contact"><strong>Get in touch:</strong> <a href="https://www.linkedin.com/in/julianahb/"
+                    target="_blank" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg></a></p>
         </div>
-        
+
         <nav class="main-nav">
             <a href="#about" class="nav-link active">About me</a>
             <a href="#work" class="nav-link">My Work</a>
@@ -27,77 +41,92 @@
     </section>
 
     <main id="main-content">
-    <section class="cases">
-        <div class="image">
-            <img src="images/ai-interaction/hero-ai.svg" alt="Strategy Hub Project" class="landscape">
-        </div>
-        <div class="project-cards">
-            <!-- First card - Active by default on desktop -->
-            <div class="card card-major active" id="quorum-AI" data-image="images/ai-interaction/hero-ai.svg" data-bgcolor="#8B5CF6" data-media-type="image" data-aspect-ratio="landscape" data-href="pages/ai-interaction.html">
-                <div class="card-tags">
-                    <span class="tag">DESIGN STRATEGY</span>
-                    <span class="tag">GOVERNMENT AFFAIRS</span>
-                </div>
-                <h2>Product experience in the age of AI</h2>
-                <p>Research and design work exploring how AI is reshaping product experiences, informing the strategy for an AI-driven SaaS platform.</p>
-                <button class="read-case">Read case</button>
+        <section class="cases">
+            <div class="image">
+                <img src="images/ai-interaction/hero-ai.svg" alt="Strategy Hub Project" class="landscape">
             </div>
-            
-            <div class="secondary-cards">
-                <div class="card card-minor" data-image="images/teachers-ux/newsela-cover.png" data-bgcolor="#3B82F6" data-media-type="image" data-aspect-ratio="landscape" data-href="pages/teachers-ux.html">
+            <div class="project-cards">
+                <!-- First card - Active by default on desktop -->
+                <div class="card card-major active" id="quorum-AI" data-image="images/ai-interaction/hero-ai.svg"
+                    data-bgcolor="#8B5CF6" data-media-type="image" data-aspect-ratio="landscape"
+                    data-href="pages/ai-interaction.html">
                     <div class="card-tags">
-                        <span class="tag">UX RESEARCH</span>
-                        <span class="tag">ED TECH</span>
-                    </div>
-                    <h3>UX research and school literacy in a post pandemic world</h3>
-                    <p>UX interviews to uncover how school teachers use an Ed tech platform to support literacy, from generative interviews to product validation.</p>
-                    <button class="read-case">Read case</button>
-                </div>
-                
-                <div class="card card-minor" data-image="images/Via/via-3apps.png" data-bgcolor="#EC4899" data-media-type="image" data-aspect-ratio="compact" data-href="pages/via-apps.html">
-                    <div class="card-tags">
-                        <span class="tag">MOBILE APPS</span>
-                        <span class="tag">MARKETPLACE</span>
-                    </div>
-                    <h3>Black Friday Optimization for marketplace apps</h3>
-                    <p>In enterprise systems, UX drives adoption beyond customers. A new study, alongside four years of surveys, revealed long-standing issues.</p>
-                    <button class="read-case">Read case</button>
-                </div>
-                
-                <div class="card card-minor" data-image="images/pnipe/Pnipe - cover.svg" data-bgcolor="#10B981" data-media-type="image" data-aspect-ratio="landscape" data-href="pages/scientific-research.html">
-                    <div class="card-tags">
-                        <span class="tag">UX RESEARCH</span>
-                        <span class="tag">PRODUCT DESIGN</span>
-                        <span class="tag">SCIENTIFIC RESEARCH</span>
-                    </div>
-                    <h3>Fostering collaboration in science & research ecosystem</h3>
-                    <p>Designed the MVP of the National Research Infrastructure Platform for the Ministry of Science and Technology.</p>
-                    <button class="read-case">Read case</button>
-                </div>
-                
-                <div class="card card-minor" data-image="images/museu/museu-hero.png" data-bgcolor="#F59E0B" data-media-type="image" data-aspect-ratio="portrait" data-href="pages/museum-app.html">
-                    <div class="card-tags">
-                        <span class="tag">UX RESEARCH</span>
                         <span class="tag">DESIGN STRATEGY</span>
+                        <span class="tag">GOVERNMENT AFFAIRS</span>
                     </div>
-                    <h3>Museum APP for a living community</h3>
-                    <p>Conceptual educational mobile app for the National Museum of Rio de Janeiro, highlighting community and education programs active after the fire.</p>
+                    <h2>Product experience in the age of AI</h2>
+                    <p>Research and design work exploring how AI is reshaping product experiences, informing the
+                        strategy for an AI-driven SaaS platform.</p>
                     <button class="read-case">Read case</button>
                 </div>
+
+                <div class="secondary-cards">
+                    <div class="card card-minor" data-image="images/teachers-ux/newsela-cover.png"
+                        data-bgcolor="#3B82F6" data-media-type="image" data-aspect-ratio="landscape"
+                        data-href="pages/teachers-ux.html">
+                        <div class="card-tags">
+                            <span class="tag">UX RESEARCH</span>
+                            <span class="tag">ED TECH</span>
+                        </div>
+                        <h3>UX research and school literacy in a post pandemic world</h3>
+                        <p>UX interviews to uncover how school teachers use an Ed tech platform to support literacy,
+                            from generative interviews to product validation.</p>
+                        <button class="read-case">Read case</button>
+                    </div>
+
+                    <div class="card card-minor" data-image="images/Via/via-3apps.png" data-bgcolor="#EC4899"
+                        data-media-type="image" data-aspect-ratio="compact" data-href="pages/via-apps.html">
+                        <div class="card-tags">
+                            <span class="tag">MOBILE APPS</span>
+                            <span class="tag">MARKETPLACE</span>
+                        </div>
+                        <h3>Black Friday Optimization for marketplace apps</h3>
+                        <p>In enterprise systems, UX drives adoption beyond customers. A new study, alongside four years
+                            of surveys, revealed long-standing issues.</p>
+                        <button class="read-case">Read case</button>
+                    </div>
+
+                    <div class="card card-minor" data-image="images/pnipe/Pnipe - cover.svg" data-bgcolor="#10B981"
+                        data-media-type="image" data-aspect-ratio="landscape"
+                        data-href="pages/scientific-research.html">
+                        <div class="card-tags">
+                            <span class="tag">UX RESEARCH</span>
+                            <span class="tag">PRODUCT DESIGN</span>
+                            <span class="tag">SCIENTIFIC RESEARCH</span>
+                        </div>
+                        <h3>Fostering collaboration in science & research ecosystem</h3>
+                        <p>Designed the MVP of the National Research Infrastructure Platform for the Ministry of Science
+                            and Technology.</p>
+                        <button class="read-case">Read case</button>
+                    </div>
+
+                    <div class="card card-minor" data-image="images/museu/museu-hero.png" data-bgcolor="#F59E0B"
+                        data-media-type="image" data-aspect-ratio="portrait" data-href="pages/museum-app.html">
+                        <div class="card-tags">
+                            <span class="tag">UX RESEARCH</span>
+                            <span class="tag">DESIGN STRATEGY</span>
+                        </div>
+                        <h3>Museum APP for a living community</h3>
+                        <p>Conceptual educational mobile app for the National Museum of Rio de Janeiro, highlighting
+                            community and education programs active after the fire.</p>
+                        <button class="read-case">Read case</button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
     </main>
 
     <footer class="footer">
         <p>Reach out</p>
         <a href="https://www.linkedin.com/in/julianahb/" target="_blank" aria-label="LinkedIn">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
             </svg>
         </a>
     </footer>
-    
+
     <script src="scripts/main.js"></script>
 </body>
+
 </html>
