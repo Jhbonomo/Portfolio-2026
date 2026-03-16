@@ -140,7 +140,7 @@ body {
 .article-title {
     color: #222;
     font-size: clamp(1.75rem, 4vw + 0.5rem, 3rem);
-    font-family: 'Merriweather', serif;
+    font-family: var(--font-family-serif);
     line-height: 1.2;
     margin-bottom: clamp(1rem, 3vw, 2rem);
 }
@@ -276,7 +276,7 @@ body {
 }
 
 .article-title {
-    font-family: 'Merriweather', serif;
+    font-family: var(--font-family-serif);
     font-size: clamp(2rem, 5vw, 3.5rem);
     text-align: center;
     font-weight: 700;
