@@ -227,8 +227,10 @@ body {
 
 .tldr-team strong {
     font-family: var(--font-family-sans);
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: clamp(0.75rem, 1vw, 0.9rem);
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
     display: block;
     margin-bottom: 0.2rem;
     color: #222;
@@ -358,6 +360,18 @@ body {
     .tldr-bottom {
         flex-direction: column;
         gap: 2rem;
+    }
+
+    .tldr-section {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .tldr-vertical-label {
+        writing-mode: horizontal-tb;
+        transform: none;
+        align-self: auto;
+        font-size: 0.75rem;
     }
 }
 
