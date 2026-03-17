@@ -285,9 +285,7 @@ body {
     text-transform: uppercase;
     color: #222;
     flex-shrink: 0;
-    align-self: stretch;
-    display: flex;
-    align-items: center;
+    align-self: flex-start;
 }
 
 .tldr-list {
