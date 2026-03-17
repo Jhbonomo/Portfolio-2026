@@ -40,7 +40,7 @@
     
     /* Typography */
     --font-family-serif: 'BioRhyme', serif;
-    --font-family-sans: 'Merriweather Sans', sans-serif;
+    --font-family-sans: 'Commissioner', sans-serif;
     --font-family-base: var(--font-family-sans);
     --font-family-headings: var(--font-family-serif);
     --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
