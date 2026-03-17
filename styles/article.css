@@ -191,7 +191,7 @@ body {
 
 .tldr-hero {
     width: 100%;
-    padding: 0 clamp(3rem, 6vw, 6rem);
+    padding: 0 clamp(3rem, 6vw, 6rem) 3rem;
     display: flex;
     flex-direction: column;
     gap: clamp(1rem, 2vw, 1.5rem);
@@ -320,10 +320,13 @@ body {
 .tldr-cta-row {
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin-top: -1.375rem;
 }
 
 .tldr-cta {
-    background: none;
+    background: #F3F3E9;
     border: 1.5px solid #222;
     color: #222;
     font-family: var(--font-family-sans);
@@ -332,6 +335,7 @@ body {
     padding: 0.75rem 2rem;
     border-radius: 100px;
     cursor: pointer;
+    white-space: nowrap;
     transition: background 0.2s ease, color 0.2s ease;
 }
 
