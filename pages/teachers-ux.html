@@ -39,50 +39,53 @@
       <span class="tag">EDUCATION</span>
       <span class="tag">EDTECH</span>
     </div>
+    <span class="sticky-timeline">2022</span>
   </div>
 
-  <!-- HERO WRAPPER -->
+  <!-- HERO WRAPPER — TL;DR Panel -->
   <div class="hero-wrapper">
-    <div class="article-hero">
-      <h1 class="article-title">
-        What school teachers taught me about people and UX
-      </h1>
+    <div class="tldr-hero">
 
-      <div class="hero-flex-row">
-        <div class="hero-image-container">
+      <div class="tldr-top">
+        <div class="tldr-title-col">
+          <h1 class="article-title">What school teachers taught me about people and UX</h1>
+          <p class="tldr-intro">UX research engagement embedded in an EdTech literacy platform — studying how K-12 teachers discovered, evaluated, and used content to support students post-pandemic.</p>
+          <div class="tldr-team">
+            <strong>Team</strong>
+            <p>UX research team — Newsela (Contractor via BairesDev)</p>
+          </div>
+        </div>
+        <div class="tldr-image-col">
           <figure class="article-hero-image">
             <img src="../images/teachers-ux/newsela-cover.png" alt="Teachers and UX research case study" />
           </figure>
         </div>
-        <div class="hero-text">
-          <div class="project-details-hero">
-            <div class="detail-item-hero">
-              <h3>Project</h3>
-              <p>UX researcher for an EdTech platform</p>
-            </div>
-            <div class="detail-item-hero">
-              <h3>TIMELINE</h3>
-              <p>2022</p>
-            </div>
-            <div class="detail-item-hero">
-              <h3>TEAM</h3>
-              <p>UX research team</p>
-            </div>
-            <div class="detail-item-hero">
-              <h3>COMPANY</h3>
-              <p>Newsela (Contractor via BairesDev)</p>
-            </div>
-          </div>
-          <button class="scroll-down-btn" aria-label="Scroll down">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="24" r="22" stroke="#000000" stroke-width="4" />
-              <path d="M16 22L24 30L32 22" stroke="#000000" stroke-width="3" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </button>
+      </div>
+
+      <div class="tldr-bottom">
+        <div class="tldr-section">
+          <span class="tldr-vertical-label">MY ROLE</span>
+          <ul class="tldr-list">
+            <li>Conducted generative and evaluative research with K-12 teachers across multiple studies.</li>
+            <li>Moderated user interviews, synthesized findings, and delivered reports to Newsela's internal team.</li>
+            <li>Covered curriculum alignment, platform discoverability, literacy formats, and post-pandemic classroom dynamics.</li>
+          </ul>
+        </div>
+        <div class="tldr-section">
+          <span class="tldr-vertical-label">RESULTS</span>
+          <ul class="tldr-list">
+            <li>Uncovered systemic patterns in how teachers navigated and adopted the platform.</li>
+            <li>Insights directly informed product and content decisions across research streams.</li>
+            <li>Contributed to understanding reading literacy format preferences across student levels.</li>
+          </ul>
         </div>
       </div>
+
     </div>
+  </div>
+
+  <div class="tldr-cta-row">
+    <button class="tldr-cta" id="scroll-down-btn" aria-label="Read full case">Read full case ↓</button>
   </div>
 
   <main id="main-content">
@@ -300,7 +303,7 @@
   <script src="../scripts/accordion-script.js"></script>
   <script>
     document
-      .querySelector(".scroll-down-btn")
+      .getElementById("scroll-down-btn")
       .addEventListener("click", function () {
         const extraOffset = 32;
         const target = document.getElementById("overview");
