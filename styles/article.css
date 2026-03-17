@@ -190,10 +190,8 @@ body {
 }
 
 .tldr-hero {
-    max-width: 1100px;
-    margin: 0 auto;
     width: 100%;
-    padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 3vw, 2rem);
+    padding: clamp(1.5rem, 3vw, 2.5rem) clamp(2rem, 5vw, 5rem);
     display: flex;
     flex-direction: column;
     gap: clamp(2rem, 4vw, 3rem);
@@ -277,9 +275,9 @@ body {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     font-family: var(--font-family-sans);
-    font-size: 0.65rem;
+    font-size: clamp(0.75rem, 1vw, 0.9rem);
     font-weight: 800;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     color: #222;
     flex-shrink: 0;
