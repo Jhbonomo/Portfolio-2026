@@ -33,50 +33,56 @@
       <span class="tag">PRODUCT DESIGN</span>
       <span class="tag">AI STRATEGY</span>
     </div>
+    <span class="sticky-timeline">2025</span>
   </div>
 
-  <!-- HERO WRAPPER -->
+  <!-- HERO WRAPPER — TL;DR Panel -->
   <div class="hero-wrapper">
-    <div class="article-hero">
-      <h1 class="article-title">
-        How AI Changes the Way We Interact with Products
-      </h1>
+    <div class="tldr-hero">
 
-      <div class="hero-flex-row">
-        <div class="hero-image-container">
+      <!-- Top: title + image -->
+      <div class="tldr-top">
+        <div class="tldr-title-col">
+          <h1 class="article-title">How AI Changes the Way We Interact with Products</h1>
+          <p class="tldr-intro">Defining how AI should integrate across a product platform — from discovery to strategic vision — and coordinating a design team to bring it to life.</p>
+          <div class="tldr-team">
+            <strong>Team</strong>
+            <p>Cross-functional collaboration — Quorum</p>
+          </div>
+        </div>
+        <div class="tldr-image-col">
           <figure class="article-hero-image">
             <img src="../images/ai-interaction/hero-ai.svg" alt="AI product interaction case study" />
           </figure>
         </div>
-        <div class="hero-text">
-          <div class="project-details-hero">
-            <div class="detail-item-hero">
-              <h3>ROLE</h3>
-              <p>Product Design Manager</p>
-            </div>
-            <div class="detail-item-hero">
-              <h3>TIMELINE</h3>
-              <p>2025</p>
-            </div>
-            <div class="detail-item-hero">
-              <h3>TEAM</h3>
-              <p>Cross-functional collaboration</p>
-            </div>
-            <div class="detail-item-hero">
-              <h3>COMPANY</h3>
-              <p>Quorum</p>
-            </div>
-          </div>
-          <button class="scroll-down-btn" aria-label="Scroll down">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="24" r="22" stroke="#000000" stroke-width="4" />
-              <path d="M16 22L24 30L32 22" stroke="#000000" stroke-width="3" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </button>
+      </div>
+
+      <!-- Bottom: MY ROLE + RESULTS -->
+      <div class="tldr-bottom">
+        <div class="tldr-section">
+          <span class="tldr-vertical-label">MY ROLE</span>
+          <ul class="tldr-list">
+            <li>Worked with Product Director and VP to shape the strategic vision for AI across the platform.</li>
+            <li>Coordinated design team across concepts and prototypes, enabling ownership per domain.</li>
+            <li>Defined AI interaction principles guiding squad roadmaps and MVP planning.</li>
+          </ul>
+        </div>
+        <div class="tldr-section">
+          <span class="tldr-vertical-label">RESULTS</span>
+          <ul class="tldr-list">
+            <li>Established the first shared AI vision, aligning squads around AI-supported workflows.</li>
+            <li>Shifted the conversation from "adding AI features" to designing integrated experiences.</li>
+            <li>Delivered product assessment, interaction patterns study, AI journey maps, and vision prototype.</li>
+          </ul>
         </div>
       </div>
+
     </div>
+  </div>
+
+  <!-- CTA sits on the border between hero and content -->
+  <div class="tldr-cta-row">
+    <button class="tldr-cta" id="scroll-down-btn" aria-label="Read full case">Read full case ↓</button>
   </div>
 
   <main id="main-content">
@@ -440,7 +446,7 @@
   <script src="../scripts/article.js"></script>
   <script>
     document
-      .querySelector(".scroll-down-btn")
+      .getElementById("scroll-down-btn")
       .addEventListener("click", function () {
         const extraOffset = 32;
         const target = document.getElementById("overview");
