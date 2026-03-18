@@ -327,6 +327,9 @@ body {
 }
 
 .tldr-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     background: #F3F3E9;
     border: 1.5px solid #222;
     color: #222;
@@ -338,6 +341,10 @@ body {
     cursor: pointer;
     white-space: nowrap;
     transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tldr-cta svg {
+    transition: stroke 0.2s ease;
 }
 
 .tldr-cta:hover,
