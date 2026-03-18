@@ -46,6 +46,7 @@ h1 {
     font-size: var(--font-size-h1);
     margin-bottom: var(--spacing-md);
     font-weight: var(--font-weight-bold);
+    line-height: 1.2;
 }
 
 h2 {
@@ -490,9 +491,8 @@ p {
     }
     
     .wrapper {
-        height: auto;
+        height: 100dvh;
         min-height: 100vh;
-        min-height: 100dvh; /* Dynamic viewport height for mobile */
         padding: var(--spacing-md);
         padding-bottom: var(--spacing-md);
     }
