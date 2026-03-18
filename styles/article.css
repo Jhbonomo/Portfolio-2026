@@ -120,7 +120,7 @@ body {
 }
 
 .detail-item-hero h3 {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 0.875rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -130,7 +130,7 @@ body {
 }
 
 .detail-item-hero p {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 0.875rem;
     color: #222;
     margin: 0;
@@ -416,7 +416,7 @@ body {
     gap: var(--spacing-xs);
     color: #222;
     text-decoration: none;
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-weight: 500;
     transition: transform 0.2s ease;
     font-size: clamp(0.875rem, 1.5vw, 1rem);
@@ -463,7 +463,7 @@ body {
 }
 
 .article-tags .tag {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -474,7 +474,7 @@ body {
 }
 
 .article-date {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 0.875rem;
     color: var(--text-secondary);
 }
@@ -490,7 +490,7 @@ body {
 }
 
 .article-intro {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 1.25rem;
     line-height: 1.6;
     color: var(--text-secondary);
@@ -548,7 +548,7 @@ body {
 }
 
 .overview-intro {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: clamp(1.125rem, 2vw, 1.25rem);
     line-height: 1.7;
     color: var(--text-primary);
@@ -565,7 +565,7 @@ margin-top: var(--spacing-xs);
 }
 
 .content-section h3 {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 1.25rem;
     font-weight: 600;
     margin-top: var(--spacing-sm);
@@ -574,7 +574,7 @@ margin-top: var(--spacing-xs);
 }
 
 .content-section p {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
     line-height: 1.8;
     color: var(--text-primary);
@@ -587,7 +587,7 @@ margin-top: var(--spacing-xs);
 }
 
 .content-section li {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 1.125rem;
     line-height: 1.8;
     color: var(--text-primary);
@@ -604,7 +604,7 @@ margin-top: var(--spacing-xs);
 }
 
 .detail-item h3 {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 0.875rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -614,7 +614,7 @@ margin-top: var(--spacing-xs);
 }
 
 .detail-item p {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 1rem;
     color: var(--text-primary);
     margin: 0;
@@ -638,7 +638,7 @@ margin-top: var(--spacing-xs);
 }
 
 .article-image figcaption {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 0.875rem;
     color: var(--text-secondary);
     text-align: center;
@@ -661,7 +661,7 @@ margin-top: var(--spacing-xs);
 }
 
 .insight-card h3 {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 1.125rem;
     font-weight: 600;
     margin: 0 0 var(--spacing-sm) 0;
@@ -669,7 +669,7 @@ margin-top: var(--spacing-xs);
 }
 
 .insight-card p {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 1rem;
     line-height: 1.6;
     color: var(--text-secondary);
@@ -699,7 +699,7 @@ margin-top: var(--spacing-xs);
 }
 
 .result-label {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 0.875rem;
     color: var(--text-secondary);
     line-height: 1.4;
@@ -714,7 +714,7 @@ margin-top: var(--spacing-xs);
 }
 
 .project-nav-label {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -741,7 +741,7 @@ margin-top: var(--spacing-xs);
 .project-nav-link {
     display: inline-block;
     padding: var(--spacing-xs) var(--spacing-md);
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     font-size: 0.875rem;
     font-weight: 500;
     color: var(--text-secondary);
