@@ -40,6 +40,7 @@ body {
 h1, h2, h3 {
     font-family: var(--font-family-serif);
     color: var(--color-gray-900);
+    line-height: 1.2;
 }
 
 h1 {
@@ -421,7 +422,7 @@ p {
     .project-cards {
         position: relative;
         z-index: 10;
-        padding: var(--spacing-xs);
+        padding: var(--spacing-sm);
         padding-bottom: 60px;
     }
     
@@ -433,7 +434,6 @@ p {
     /* Unify all cards to card-minor styling */
     .card-major {
         padding: var(--spacing-xs) var(--spacing-xs);
-        padding-left: var(--spacing-sm);
     }
     
     .card-major .card-tags {
@@ -487,7 +487,7 @@ p {
     
     .card:hover,
     .card.active {
-        border-left-color: transparent;
+        border: none;
     }
     
     .wrapper {
